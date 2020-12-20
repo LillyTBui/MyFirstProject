@@ -6,11 +6,11 @@
     <title>Rainydays | Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="company selling quality rain jackets." />
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="styles/styles.css" rel="stylesheet" />
   </head>
   <body>
     <header>
-      <a href="index.html" class="logo">Rainydays</a>
+      <a href="index.html"><img src="/images/RainyDays_Logo.png" class="logo"></a>
       <nav>
         <ul>
           <li>Shop</li>
@@ -22,55 +22,69 @@
     </header>
 
     <main>
-      <section>
-        <div>
+      <section class="welcome">
+        <div class="welcome__content">
           <h1>Pushing the Comfort Zone</h1>
           <p>
             Comfortable high quality rain jackets suitable to all outdoor
             activities.
           </p>
-          <a href="shop.html">Shop</a>
+          <a href="shop.html" class="cta">Shop</a>
         </div>
+        <img src="/images/welcome-img.jpg" alt="two men on a top of a mountain looking out in the distance">
       </section>
 
-      <section>
-        <div>
-          <h2>Free shipping</h2>
-          <p>Free shipping to all destinations in Europe</p>
-        </div>
-        <div>
-          <h2>Support customer</h2>
-          <p>Customer service is available at all time in our website</p>
-        </div>
-        <div>
-          <h2>Secure payments</h2>
-          <p>
-            Several payments available. Choose the one you are the most
-            comfortable with.
-          </p>
-        </div>
+      <section class="service">
+          <div class="service__info">
+            <h2>Free shipping</h2>
+            <p>Free shipping to all destinations in Europe</p>
+          </div>
+          <div class="service__info">
+            <h2>Support customer</h2>
+            <p>Customer service is available at all time in our website</p>
+          </div>
+          <div class="service__info">
+            <h2>Secure payments</h2>
+            <p>
+              Several payments available. Choose the one you are the most
+              comfortable with.
+            </p>
+          </div>
+        
       </section>
 
-      <section>
+      <section class="explore">
         <h2>Explore our products</h2>
-        <div>
+        <div class="explore__content">
           <img
             src="images/explore-pic.jpg"
             alt="smiling man with red rain jacket"
+            class="explore_img"
           />
-          <a href="shop-men.html">Shop Men</a>
+          <div class="explore__button">
+            <a href="shop-men.html" class="cta shop">Shop Men</a>
+          </div>
         </div>
-        <div>
+        <div class="explore__content">
           <img
             src="images/explore-pic2.jpg"
             alt="woman with yellow rain jacket on a mountain top"
+            class="explore_img2"
           />
-          <a href="shop-women.html">Shop Women</a>
+          <div class="explore__button">
+            <a href="shop-women.html" class="cta shop">Shop Women</a>
+          </div>
         </div>
+        
       </section>
 
-      <section>
-        <div>
+      <section class="review">
+          <img
+          src="images/review-img.jpg"
+          alt="smiling and walking woman with yellow rain jacket"
+          class="review__image"
+        />
+        <div class="review__customer">
           <h2>Customer Review</h2>
           <p>
             «Loving this beautiful rain jacket I recently got from RainyDays! It
@@ -81,24 +95,29 @@
           <p>- Susan Johnson</p>
         </div>
       </section>
-      <section>
+
+      <section class="popular-products">
         <h2>Popular Products</h2>
         <div>
+          <img src="images/yellow-rainjacket.jpg" alt="yellow raincoat">
           <h3>RainyDays</h3>
           <p>Seasonal autumn rain jacket</p>
           <p>1999,-</p>
         </div>
         <div>
+          <img src="images/yellow-rainjacket.jpg" alt="yellow raincoat">
           <h3>RainyDays</h3>
           <p>Seasonal spring rain jacket</p>
           <p>1999,-</p>
         </div>
         <div>
+          <img src="images/yellow-rainjacket.jpg" alt="yellow raincoat">
           <h3>RainyDays</h3>
           <p>Seasonal winter</p>
           <p>2999,-</p>
         </div>
         <div>
+          <img src="images/yellow-rainjacket.jpg" alt="yellow raincoat">
           <h3>RainyDays</h3>
           <p>Seasonal outdoor</p>
           <p>2999,-</p>
@@ -107,8 +126,18 @@
     </main>
 
     <footer>
-      <a href="contact-us.html">Help</a>
-      <p>Coopyright &copy;</p>
+        <div class="footer__content">
+          <a href="contact-us.html">Help</a>
+        </div>
+        <div class="footer__content">
+          <p>Copyright &copy;</p>
+        </div>
+        <div class="footer__content">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-youtube"></i>
+        </div>
+      
     </footer>
   </body>
 </html>
