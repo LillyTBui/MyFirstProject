@@ -90,25 +90,26 @@ nav ul {
 .explore {
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    max-width: 1230px;
+    max-width: 1000px;
     margin: 50px auto;
-    grid-gap: 10px;
+    grid-gap: 20px;
     font-size: 0.9em;
 }
 
-.explore img {
-    max-width: 100%;
+.explore__men {
+    background-image: url("../images/explore-pic.jpg");
 }
 
-.explore__content {
+.explore__women {
+    background-image: url("../images/explore-pic2.jpg");
+}
+.explore-size {
+    background-size: cover;
+    min-height: 450px;
+    max-width: 500px;
     position: relative;
 }
 
-.explore__button {
-    position: absolute;
-    left: 3%;
-    top: 85%;
-}
 .review {
     background-color:#EFEFEF;
     display: flex;
@@ -138,12 +139,24 @@ nav ul {
 
 .popular-products h2, .explore h2 {
     grid-column: -1/1;
-    text-align: center;
-    text-decoration: underline;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    padding-bottom: 10px;
+    margin: 0px auto 0px auto;
+    max-width: 235px;
+}
+
+.popular-products h2 {
+    max-width: 190px;
 }
 
 .popular-products img {
     max-width: 100%;
+    transition-duration: 1s;
+}
+
+.popular-products img:hover {
+    opacity: 0.8;
 }
 
 /* Footer */ 
@@ -180,4 +193,15 @@ a {
     border-radius: 30px;
     font-size: 1em;
     color: white;
-  }
+    transition-duration: 1s;
+}
+
+.cta:hover {
+    opacity: 0.8;
+}
+
+.shop {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
