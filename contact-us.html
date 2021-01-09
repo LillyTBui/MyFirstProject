@@ -1,1 +1,83 @@
 <!-- @format -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rainydays | Contact</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="company's contact page." />
+    <link href="styles/styles.css" rel="stylesheet" />
+    <link href="styles/contact.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/b9235904b4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="images/RainyDays_Logo.png" class="logo"></a>
+        <nav>
+          <ul>
+            <li>Shop</li>
+            <li><a href="new-arrivals.html">New Arrivals</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+          </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="contact__info">
+            <div>
+                <h1>Get in touch</h1>
+                <p>Customer service is available at all time in our website.</p>
+                <p>Fill in the required form to send in your query. Please fill in as much information as possible.</p>
+                <div class="contact__social">
+                    <h2>We are also on social media</h2>
+                    <a href=""><i class="fab fa-facebook-f fa-2x"></i></a>
+                    <a href=""><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href=""><i class="fab fa-youtube fa-2x"></i></a>
+                </div>
+            </div>
+        </section>
+        <section class="contact__form">
+            <form method="POST">
+                <fieldset>
+                    <div class="form-wrapper">
+                        <label for="name">Your full name</label>
+                        <input type="text" name="name" id="name">
+                        <label for="email">Your email</label>
+                        <input type="email" name="email" id="email" required>
+                        <label for="subject">Subject</label>
+                        <select name="subject" id="subject" required>
+                            <option value=""></option>
+                            <option value="account">Account</option>
+                            <option value="purchase">Purchase</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message"></textarea>
+                        <div>
+                            <input type="checkbox" id="email-updates">
+                            <label for="email-updates">Sign up for email updates</label>
+                        </div>
+                        <input type="submit" value="Send" class="send-button">
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+       
+    </main>
+    <footer>
+        <div class="footer__content">
+            <a href="contact-us.html">Help</a>
+          </div>
+          <div class="footer__content">
+            <p>Copyright &copy;</p>
+          </div>
+          <div class="footer__content">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
+    </footer>
+</body>
+</html>

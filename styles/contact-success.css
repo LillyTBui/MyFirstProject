@@ -1,0 +1,24 @@
+main {
+    display: flex;
+    margin: 150px auto;
+    max-width: 1000px;
+    flex-direction:column;
+    text-align: center;
+    height:52vh;
+}
+
+.icon {
+    margin: 50px;
+    color: #08BA5B;
+}
+
+.back-to-home {
+    background-color: #0b3a40;
+    border-radius: 20px;
+    max-width: 250px;
+    padding: 10px 30px;
+    color: white;
+    border:none;
+    font-weight: bold;
+    margin: 20px auto;
+}

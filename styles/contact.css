@@ -1,0 +1,56 @@
+main {
+    display: flex;
+    margin: 120px auto;
+    max-width: 1300px;
+    height: 58vh;
+}
+
+.contact__info, .contact__form{
+    flex: 1;
+    font-size: 1em;
+    padding: 0px 25px;
+    max-width: 600px;
+    animation-name: info;
+    animation-duration: 1.2s;
+    position: relative;
+}
+
+@keyframes info {
+    0%{top: 60px;}
+    100%{top: 0px;}
+}
+.contact__social {
+    margin-top: 50px;
+}
+
+input, select, textarea{
+    border: 1px solid #1A1A1A;
+    border-radius: 5px;
+    margin: 10px 10px 10px 0px;
+    padding: 10px;
+}
+
+textarea {
+    min-height: 80px;
+}
+
+fieldset {
+    border-radius: 5px;
+}
+
+.form-wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+/* Link */ 
+
+.send-button {
+    background-color:  #e7bb2c;
+    min-width: 120px;
+    border: none;
+    color: white;
+    margin: 20px auto;
+    font-weight: bold;
+}
