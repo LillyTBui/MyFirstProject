@@ -36,6 +36,9 @@ nav {
 nav li{
     display: inline-block;
     padding: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 nav ul {
@@ -46,7 +49,7 @@ nav ul {
     background-image: url("../images/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 65vh;
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -54,19 +57,23 @@ nav ul {
   
 .welcome__content {
     background-color: white;
+    min-height: 30vh;
     padding:40px 70px;
-    margin: 20px 0;
-    margin-top: 95px;
-    font-size: 0.9em;
+    margin: auto 0;
     position: relative;
 }
 
-.welcome img {
+.welcome__img {
+    background-image: url("../images/welcome-img.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     position: absolute;
-    max-width: 350px;
-    left: 60%;
-    top: 20%;
-    bottom: 25%;
+    width: 450px;
+    height: 500px;
+    left: 60vw;
+    top: 20vh;
+    bottom: 25vw;
 }
 
 .welcome p {
@@ -79,21 +86,21 @@ nav ul {
 .service {
     display: flex;
     margin: 20px auto;
-    max-width: 1000px;
+    max-width: 90vw;
 }
 
 .service > *{
     flex: 1;
     text-align: center;
-    font-size: 0.75em;
+    font-size: 0.9em;
     padding: 0px 25px;
-    max-width: 300px;
+    max-width: 500px;
 }
 
 .explore {
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    max-width: 1000px;
+    max-width: 1700px;
     margin: 50px auto;
     grid-gap: 20px;
     font-size: 0.9em;
@@ -108,8 +115,8 @@ nav ul {
 }
 .explore-size {
     background-size: cover;
-    min-height: 450px;
-    max-width: 500px;
+    min-height: 60vh;
+    max-width: 90vw;
     position: relative;
 }
 
@@ -124,7 +131,7 @@ nav ul {
     max-width: 500px;
     margin-left: 50px;
     margin-top: 20px;
-    font-size:0.9em;
+    font-size:1em;
 }
 .review__image {
     border-radius: 50%;
@@ -134,7 +141,7 @@ nav ul {
 .popular-products {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    max-width: 1000px;
+    max-width: 1500px;
     margin: 50px auto;
     grid-gap: 15px;
     font-size: 0.9em;
@@ -178,7 +185,11 @@ footer {
 }
 footer a {
     color: white;
-    margin-left: 50px;
+    margin-left: 70px;
+}
+
+.footer__icons {
+    margin-right: 70px;
 }
 
 /* Links 
@@ -193,7 +204,6 @@ a {
     background-color: #e7bb2c;
     padding: 8px 23px;
     border-radius: 30px;
-    font-size: 1em;
     color: white;
     transition-duration: 1s;
     font-weight: bold;
