@@ -1,0 +1,82 @@
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 70px auto;
+    max-width: 60vw;
+    min-height: 67vh;
+    box-shadow: 2px 2px 2px  2px rgb(185, 177, 177);
+}
+
+.login__info {
+    background-image: url("../images/login-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    min-width: 100%;
+    position: relative;
+}
+
+.login__text {
+   max-width: 50%;
+   position: absolute;
+   top: 20px;
+   left: 20px;
+
+}
+.login__form {
+    max-width: 40vw;
+    margin: auto;
+    display: flex;
+    text-align: center;
+}
+
+.login__form > * {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    max-width: 20vw;
+}
+
+.login__form p {
+    font-size: 0.8em;
+}
+label, .remember {
+    text-align: left;
+}
+
+input, p, .remember {
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.remember {
+    padding-left: 0px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+}
+
+.forgot-password {
+    text-decoration: underline;
+    font-size: 0.9em;
+    text-align: right;
+    font-family: "Arial";
+    margin-top: 6px;
+}
+
+#login-button {
+    border-radius: 0px;
+    margin: 0px;
+    padding: 10px;
+    font-family: "Lucida Grande", "Lucida Sans", "Lucida Sans Regular",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.facebook-btn {
+    background-color: #3b5998;
+    color: white;
+    font-size: 0.8em;
+    padding: 10px;
+    letter-spacing: 1px;
+}

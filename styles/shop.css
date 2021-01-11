@@ -1,0 +1,71 @@
+.product__content {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: 
+    'categories filter'
+    'categories products';
+    margin: 20px 60px 50px 0px;
+}
+
+
+.dropdown {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("../images/plus-solid.svg");
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: 50%;
+    background-size: 6%;
+}
+
+.shop-women__welcome, .shop-men__welcome {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    min-height: 50vh;
+}
+
+.shop-women__welcome{
+    background-image: url("../images/shop-women.jpg");
+}
+
+.shop-men__welcome{
+    background-image: url("../images/shop-men.jpg");
+}
+.categories {
+    grid-area: categories;
+    text-align: center;
+}
+
+.categories-wrapper{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+select {
+    padding: 5px 30px 5px 5px;
+    border: 1px solid #d3d2d2;
+    margin: 5px auto;
+    min-width: 150px;;
+}
+
+.filter {
+    grid-area: filter;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    align-content: end;
+    margin: 30px 0px 5px 0px;
+}
+
+.popular-products {
+    grid-area: products;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1500px;
+    margin: 0px;
+    grid-gap: 15px;
+    font-size: 0.9em;
+}
+

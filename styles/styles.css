@@ -21,11 +21,11 @@ h1 {
 /* Header */
 header {
     display: flex;
-    margin: 15px;
+    margin: 15px 15px 0px 15px;
 }
 
 nav {
-    margin-left: 80px
+    margin-left: 80px;
 }
 
 .logo {
@@ -35,14 +35,41 @@ nav {
 
 nav li{
     display: inline-block;
-    padding: 10px;
+    padding: 20px;
     font-size: 1.2em;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
-nav ul {
+.icon-wrapper li {
     padding: 0px;
+}
+
+.icon-wrapper {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.nav-left {
+    display:inline-block;
+    margin-left: 35vw;
+}
+.search-wrapper {
+    position: relative;
+    max-width: 200px;
+    display: inline-block;
+    margin-left: 10px;
+}
+.search-box{
+    border-radius: 10px;
+    border: 2px solid #d3d2d2;
+    margin-left: 5px;
+}
+
+.search-icon {
+    position: absolute;
+    right: 0px;
+    top: 30px;
 }
 
 .welcome {
@@ -211,6 +238,15 @@ a {
 
 .cta:hover {
     opacity: 0.8;
+}
+
+.cta-green {
+    background-color: #145c75;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    margin: 10px auto;
 }
 
 .shop {
