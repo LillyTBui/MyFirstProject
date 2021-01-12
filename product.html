@@ -8,58 +8,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="company's contact page." />
     <link href="styles/styles.css" rel="stylesheet" />
-    <link href="styles/about.css" rel="stylesheet" />
+    <link href="styles/product.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/b9235904b4.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <a href="index.html"><img src="images/RainyDays_Logo.png" class="logo"></a>
         <nav>
-          <ul>
-            <li><a href="shop-men.html">Men</a></li>
-            <li><a href="shop-women.html">Women</a></li>
-            <li><a href="about-us.html">About Us</a></li>
-            <li><a href="contact-us.html">Contact Us</a></li>
-          </ul>
-        </nav>
+            <ul>
+                <li><a href="shop-men.html">Men</a></li>
+                <li><a href="shop-women.html">Women</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+                <div class="nav-left">
+                  <div class="search-wrapper">
+                    <li><input type="text" class="search-box" placeholder=""></li>
+                    <i class="fas fa-search fa-xs search-icon"></i>
+                  </div>
+                  <div class="icon-wrapper">
+                    <li><a href="login.html"><i class="far fa-user icon"></i></a></li>
+                    <li><a href="favorites.html"><i class="far fa-heart icon"></i></a></li>
+                    <li><a href="shopping-bag.html"><i class="fas fa-shopping-cart icon" ></i></a></li>
+                  </div>
+                </div>
+            </ul>
+          </nav>
     </header>
     
     <main>
         <div>
             <p><a href="index.html">Home</a> >> <a href="shop-women.html">Women rain jackets</a> >> Rainydays - seasonal autumn rain jacket</p>
         </div>
-        <section>
-            <div>
-                <img src="images/product_img.jpg" alt="Yellow seasonal autumn rain jacket">
-                <img src="images/product_img_part2.jpg" alt="Frontside yellow seasonal autumn rain jacket">
-                <img src="images/product_img_part3.jpg" alt="Backside yellow seasonal autumn rain jacket">
-            </div>
-        </section>
-        <section>
-            <div>
-                <h1>RainyDays</h1>
-                <h2>Seasonal autumn rain</h2>
-                <h3>Colors</h3>
-                <div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+        <div class="main-wrapper">
+            <section class="product__img">
+                <div class="product__wrapper">
+                    <div class="img1" >
+                        <img src="images/product_img.jpg" alt="Yellow seasonal autumn rain jacket" >
+                    </div>
+                    <div class="img2">
+                        <img src="images/product_img_part2.jpg" alt="Frontside yellow seasonal autumn rain jacket">
+                    </div>
+                    <div class="img3">
+                        <img src="images/product_img_part3.jpg" alt="Backside yellow seasonal autumn rain jacket" >
+                    </div>
                 </div>
-                <select name="size" id="size" class="dropdown">
-                    <option value="size">Size</option>
-                    <option value="x-small">X-small</option>
-                    <option value="small">Small</option>
-                    <option value="medium">Medium</option>
-                    <option value="Large">Large</option>
-                </select>
-                <a href="" class="cta-green">Add to chart</a>
-                <a href="" class="cta-heart"><i class="far fa-heart"></i></a>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis dictum, 
-                    fermentum ligula vitae, scelerisque sem. Nunc aliquam, neque non dignissim pulvinar, 
-                    justo augue placerat lacus, vitae vehicula velit arcu a velit. Quisque semper rhonc</p>
-            </div>
-        </section>
+            </section>
+            <section class="product__info">
+                <div>
+                    <h1>RainyDays</h1>
+                    <h2>Seasonal autumn rain</h2>
+                    <h3>Colors</h3>
+                    <div class="circles">
+                        <div><i class="fas fa-circle fa-3x yellow"></i></div>
+                        <div><i class="fas fa-circle fa-3x "></i></div>
+                        <div><i class="fas fa-circle fa-3x red"></i></div>
+                        <div><i class="fas fa-circle fa-3x blue"></i></div>
+                    </div>
+                    <select name="size" id="size" class="dropdown">
+                        <option value="size">Size</option>
+                        <option value="x-small">X-small</option>
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="Large">Large</option>
+                    </select>
+                    <div class="product__cta">
+                        <a href="shopping-bag.html" class="cta-green cta-cart">Add to cart</a>
+                        <a href="favorites.html" class="cta-heart product-heart"><i class="far fa-heart"></i></a>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis dictum, 
+                        fermentum ligula vitae, scelerisque sem. Nunc aliquam, neque non dignissim pulvinar, 
+                        justo augue placerat lacus, vitae vehicula velit arcu a velit. Quisque semper rhonc</p>
+                </div>
+            </section>
+        </div>
+        
         
     </main>
     <footer>

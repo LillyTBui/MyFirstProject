@@ -224,7 +224,8 @@ footer a {
 
 a {
     text-decoration: none;
-    color: black
+    color: black;
+    font-family: 'Arial', 'Lucida grande', Georgia, "Times New Roman", Times, serif;
 }
 
 .cta {
@@ -247,6 +248,17 @@ a {
     border: none;
     color: white;
     margin: 10px auto;
+}
+
+.btn-dark-green {
+    background-color: #0b3a40;
+    border-radius: 20px;
+    max-width: 250px;
+    padding: 10px 30px;
+    color: white;
+    border:none;
+    font-weight: bold;
+    margin: 20px auto;
 }
 
 .shop {

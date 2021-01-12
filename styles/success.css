@@ -13,13 +13,26 @@ main {
     color: #08BA5B;
 }
 
-.btn-dark-green {
-    background-color: #0b3a40;
-    border-radius: 20px;
-    max-width: 250px;
-    padding: 10px 30px;
-    color: white;
-    border:none;
-    font-weight: bold;
-    margin: 20px auto;
+.checkout-nav{
+    display: flex;
+    justify-content: space-between;
+    max-width: 50vw;
+    margin-left: 44vw;
+}
+
+#checkout-help{
+    margin: auto 0px;
+}
+.checkout-main {
+    max-width: 30vw;
+    margin: 0px auto;
+}
+
+.checkout-cta {
+    display: flex;
+}
+
+.check-btn {
+    flex: 1;
+    margin: 20px 5px;
 }
