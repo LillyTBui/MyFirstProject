@@ -21,55 +21,66 @@ h1 {
 /* Header */
 header {
     display: flex;
-    margin: 15px 15px 0px 15px;
+    margin: 20px;
+    align-items: center;
+    justify-content: space-between;
 }
 
 nav {
     margin-left: 80px;
+    display: none;
+    position: fixed;
+    top: 70px;
+    background-color: white;
+    z-index: 1000;
+    right: 0px;
 }
 
-.logo {
-    max-width: 120px;
-    margin-left: 50px;
+nav ul {
+    padding: 0px;
 }
 
 nav li{
-    display: inline-block;
+    display: block;
     padding: 20px;
-    font-size: 1.2em;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
 .icon-wrapper li {
-    padding: 0px;
+    list-style: none;
 }
 
 .icon-wrapper {
-    display: inline-block;
-    margin-left: 10px;
+    display: flex;
+    margin-left: 25vw;
 }
 
-.nav-left {
-    display:inline-block;
-    margin-left: 35vw;
+#hamburger-menu {
+    display: none;
 }
+
+#hamburger-menu:checked ~ nav {
+    display: block;
+}
+.logo {
+    max-width: 120px;
+}
+
 .search-wrapper {
     position: relative;
-    max-width: 200px;
+    max-width: 60px;
     display: inline-block;
-    margin-left: 10px;
 }
 .search-box{
     border-radius: 10px;
     border: 2px solid #d3d2d2;
-    margin-left: 5px;
 }
 
 .search-icon {
     position: absolute;
-    right: 0px;
-    top: 30px;
+    left: 150px;
+    top: 25px;
 }
 
 .welcome {
@@ -90,47 +101,22 @@ nav li{
     position: relative;
 }
 
-.welcome__img {
-    background-image: url("../images/welcome-img.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute;
-    width: 450px;
-    height: 500px;
-    left: 60vw;
-    top: 20vh;
-    bottom: 25vw;
-}
-
 .welcome p {
     padding-top: 10px;
     padding-bottom: 20px;
 }
 
-
-
 .service {
-    display: flex;
-    margin: 20px auto;
-    max-width: 90vw;
-}
-
-.service > *{
-    flex: 1;
-    text-align: center;
-    font-size: 0.9em;
-    padding: 0px 25px;
-    max-width: 500px;
+    display: none;
 }
 
 .explore {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: 1fr;
     max-width: 1700px;
-    margin: 50px auto;
-    grid-gap: 20px;
     font-size: 0.9em;
+    margin: 20px 20px 50px 20px;
+    grid-gap: 10px;
 }
 
 .explore__men {
@@ -142,34 +128,41 @@ nav li{
 }
 .explore-size {
     background-size: cover;
+    background-position: center;
     min-height: 60vh;
-    max-width: 90vw;
+    max-width: 100vw;
     position: relative;
+    margin-top: 5px;
 }
 
 .review {
     background-color:#EFEFEF;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     padding: 30px;
 }
 
+.review__customer h2 {
+    text-align: center;
+}
 .review__customer {
-    max-width: 500px;
-    margin-left: 50px;
+    max-width: 400px;
     margin-top: 20px;
     font-size:1em;
+    margin: auto;
 }
 .review__image {
     border-radius: 50%;
     max-width: 240px;
+    margin: 0px auto;
 }
 
 .popular-products {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
     max-width: 1500px;
-    margin: 50px auto;
+    margin: 50px 20px;
     grid-gap: 15px;
     font-size: 0.9em;
 }
@@ -204,6 +197,7 @@ footer {
     flex-flow: row;
     justify-content: space-between;
     align-items: baseline;
+    padding: 10px;
 }
 
 .footer__content {
@@ -212,12 +206,8 @@ footer {
 }
 footer a {
     color: white;
-    margin-left: 70px;
 }
 
-.footer__icons {
-    margin-right: 70px;
-}
 
 /* Links 
 -------------*/
@@ -271,4 +261,128 @@ a {
 i{
     font-size: large;
     margin: 0px 10px 0px 0px;
+}
+
+@media (min-width: 400px) {
+    .icon-wrapper {
+        margin-left: 37vw;
+    }
+}
+
+@media (min-width: 450px) {
+    .icon-wrapper {
+        margin-left: 45vw;
+    }
+}
+
+@media (min-width: 500px) {
+    .icon-wrapper {
+        margin-left: 50vw;
+    }
+}
+
+@media (min-width: 650px) {
+    .icon-wrapper {
+        margin-left: 60vw;
+    }
+
+    .hamburger-icon {
+        display:none;
+    }
+
+    header {
+        display: flex;
+    }
+    nav {
+        display: block;
+        position: static;
+    }
+
+    nav li {
+        display: inline-block;
+    }
+    
+    .service {
+        display: flex;
+        margin: 20px auto;
+        max-width: 90vw;
+    }
+    
+    .service > *{
+        flex: 1;
+        text-align: center;
+        font-size: 0.9em;
+        padding: 0px 25px;
+        max-width: 500px;
+    }
+
+    .explore-size {
+        min-height: 90vh;
+    }
+
+    .review {
+        flex-direction: row;
+    }
+     
+    .review__image {
+        margin: 0px;
+    }
+    .review__customer h2 {
+        text-align: left;
+    }
+    .review__customer {
+        max-width: 500px;
+        margin: 0px 0px 0px 50px;  
+    }
+    .popular-products {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 50px auto;
+    }
+
+    footer {
+        padding: 10px 50px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .nav-left {
+        display:inline-block;
+        margin-left: 35vw;
+    }
+    .welcome__img {
+        background-image: url("../images/welcome-img.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        width: 40%;
+        height: 53%;
+        top: 37%;
+        right: 4vw;
+        bottom: 25vw;
+    }
+
+    .welcome p {
+        max-width: 400px;
+    }
+    .explore {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .popular-products {
+        grid-template-columns: repeat(4, 1fr);
+        margin: 50px 20px;
+    }
+}
+
+@media (min-width: 1300px) {
+    .welcome__img{
+        height: 60%;
+    }
+    .welcome h1 {
+        font-size: 2em;
+    }
+
+    .welcome__img {
+        right: 10vw;
+    }
 }
