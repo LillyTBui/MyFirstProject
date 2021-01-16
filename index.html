@@ -7,11 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="company selling quality rain jackets." />
     <link href="styles/styles.css" rel="stylesheet" />
+    <link href="styles/index.css" rel="stylesheet" />
+    <link href="styles/media.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/b9235904b4.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
       <a href="index.html"><img src="images/RainyDays_Logo.png" class="logo"></a>
+      <label for="hamburger-menu"><i class="fas fa-bars" id="hamburger-icon"></i></label>
+      <input type="checkbox" id="hamburger-menu">
       <nav>
         <ul>
             <li><a href="shop-men.html">Men</a></li>
@@ -23,16 +27,12 @@
           <li><input type="text" class="search-box" placeholder=""></li>
           <i class="fas fa-search fa-xs search-icon"></i>
         </div>
+        <div class="icon-wrapper">
+          <li><a href="login.html"><i class="far fa-user icon"></i></a></li>
+          <li><a href="favorites.html"><i class="far fa-heart icon"></i></a></li>
+          <li><a href="shopping-bag.html"><i class="fas fa-shopping-cart icon" ></i></a></li>
+        </div>
       </nav>
-      <div class="icon-wrapper">
-        <li><a href="login.html"><i class="far fa-user icon"></i></a></li>
-        <li><a href="favorites.html"><i class="far fa-heart icon"></i></a></li>
-        <li><a href="shopping-bag.html"><i class="fas fa-shopping-cart icon" ></i></a></li>
-    </div>
-    <div class="hamburger">
-      <label for="hamburger-menu"><i class="fas fa-bars hamburger-icon"></i></label>
-      <input type="checkbox" id="hamburger-menu">
-    </div>
     </header>
 
     <main>
@@ -99,32 +99,32 @@
       <section class="popular-products">
         <h2>Popular Products</h2>
         <a href="product.html">
-          <div>
-            <img src="images/product_img.jpg" alt="Yellow seasonal autumn rain jacket">
+          <div class="product">
+            <img src="images/product-img.jpg" alt="Yellow seasonal autumn rain jacket">
             <h3>RainyDays</h3>
             <p>Seasonal autumn rain jacket</p>
             <p>1999,-</p>
           </div>
         </a>
         <a href="product.html">
-          <div>
-            <img src="images/product_img2.jpg" alt="Black seasonal spring rain jacket">
+          <div class="product">
+            <img src="images/product-img.jpg" alt="Black seasonal spring rain jacket">
             <h3>RainyDays</h3>
             <p>Seasonal spring rain jacket</p>
             <p>1999,-</p>
           </div>
         </a>
         <a href="product.html">
-          <div>
-            <img src="images/product_img3.jpg" alt="Blue seasonal winter rain jacket">
+          <div class="product">
+            <img src="images/product-img.jpg" alt="Blue seasonal winter rain jacket">
             <h3>RainyDays</h3>
             <p>Seasonal winter rain jacket</p>
             <p>2999,-</p>
           </div>
         </a>
         <a href="product.html">
-          <div>
-            <img src="images/product_img4.jpg" alt="Red seasonal outdoor">
+          <div class="product">
+            <img src="images/product-img.jpg" alt="Red seasonal outdoor">
             <h3>RainyDays</h3>
             <p>Seasonal outdoor</p>
             <p>2999,-</p>

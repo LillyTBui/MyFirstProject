@@ -9,104 +9,105 @@
     <meta name="description" content="company's contact page." />
     <link href="styles/styles.css" rel="stylesheet" />
     <link href="styles/shopping-bag.css" rel="stylesheet" />
+    <link href="styles/media.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/b9235904b4.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <a href="index.html"><img src="images/RainyDays_Logo.png" class="logo"></a>
+        <label for="hamburger-menu"><i class="fas fa-bars" id="hamburger-icon"></i></label>
+        <input type="checkbox" id="hamburger-menu">
         <nav>
-            <ul>
-                <li><a href="shop-men.html">Men</a></li>
-                <li><a href="shop-women.html">Women</a></li>
-                <li><a href="about-us.html">About Us</a></li>
-                <li><a href="contact-us.html">Contact Us</a></li>
-                <div class="nav-left">
-                  <div class="search-wrapper">
-                    <li><input type="text" class="search-box" placeholder=""></li>
-                    <i class="fas fa-search fa-xs search-icon"></i>
-                  </div>
-                  <div class="icon-wrapper">
-                    <li><a href="login.html"><i class="far fa-user icon"></i></a></li>
-                    <li><a href="favorites.html"><i class="far fa-heart icon"></i></a></li>
-                    <li><a href="shopping-bag.html"><i class="fas fa-shopping-cart icon" ></i></a></li>
-                  </div>
-                </div>
-            </ul>
-          </nav>
-    </header>
-    
+          <ul>
+              <li><a href="shop-men.html">Men</a></li>
+              <li><a href="shop-women.html">Women</a></li>
+              <li><a href="about-us.html">About Us</a></li>
+              <li><a href="contact-us.html">Contact Us</a></li>
+          </ul>
+          <div class="search-wrapper">
+            <li><input type="text" class="search-box" placeholder=""></li>
+            <i class="fas fa-search fa-xs search-icon"></i>
+          </div>
+          <div class="icon-wrapper">
+            <li><a href="login.html"><i class="far fa-user icon"></i></a></li>
+            <li><a href="favorites.html"><i class="far fa-heart icon"></i></a></li>
+            <li><a href="shopping-bag.html"><i class="fas fa-shopping-cart icon" ></i></a></li>
+          </div>
+        </nav>
+      </header>
     <main>
-        <h1>Your shopping bag</h1>
-        <h2>Products</h2>
-        <div class="product__wrapper">
-            <section class="product__info">
-                <div class="product-added added1">
-                    <img src="images/product_img.jpg" alt="Yellow seasonal autumn rain jacket">
-                    <div class="content">
-                        <h3>RainyDays</h3>
-                        <p>Seasonal autumn rain jacket</p>
+        <div class="shopping-bag__main">
+            <h1>Your shopping bag</h1>
+            <h2>Products</h2>
+            <div class="product__wrapper">
+                <section class="product__info">
+                    <div class="product-added added1">
+                        <img src="images/product-img.jpg" alt="Yellow seasonal autumn rain jacket">
+                        <div class="content">
+                            <h3>RainyDays</h3>
+                            <p>Seasonal autumn rain jacket</p>
+                        </div>
+                        <p>Black</p>
+                        <select name="size" id="size" class="dropdown">
+                            <option value="size">Size</option>
+                            <option value="x-small">X-small</option>
+                            <option value="small">Small</option>
+                            <option value="medium">Medium</option>
+                            <option value="Large">Large</option>
+                        </select>
+                        <select name="quantity" id="quantity">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <p>1999,-</p>
+                        <i class="fas fa-trash-alt"></i>
                     </div>
-                    <p>Black</p>
-                    <select name="size" id="size" class="dropdown">
-                        <option value="size">Size</option>
-                        <option value="x-small">X-small</option>
-                        <option value="small">Small</option>
-                        <option value="medium">Medium</option>
-                        <option value="Large">Large</option>
-                    </select>
-                    <select name="quantity" id="quantity">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                    </select>
-                    <p>1999,-</p>
-                    <i class="fas fa-trash-alt"></i>
-                </div>
-    
-                <div class="product-added">
-                    <img src="images/product_img2.jpg" alt="Black seasonal spring rain jacket">
-                    <div class="content">
-                        <h3>RainyDays</h3>
-                        <p>Seasonal spring rain jacket</p>
-                    </div>
-                    <p>Yellow</p>
-                    <select name="size" id="size">
-                        <option value="size">Size</option>
-                        <option value="x-small">X-small</option>
-                        <option value="small">Small</option>
-                        <option value="medium">Medium</option>
-                        <option value="Large">Large</option>
-                    </select>
-                    <select name="quantity" id="quantity">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                    </select>
-                    <p>1999,-</p>
-                    <i class="fas fa-trash-alt"></i>
-                </div>
-            </section>
-    
-            <section class="summmary__section">
-                <div class="summary">
-                    <h2>Order summary</h2>
-                    <div class="summary-row">
-                        <p>Products</p>
-                        <p>3998 NOK</p>
-                    </div>
-                    <div class="summary-row">
-                        <p>Shipping costs</p>
-                        <p>0 NOK</p>
-                    </div>
-                    <div class="summary-row">
-                        <p><strong>Total Prize</strong></p>
-                        <p>3998 NOK</p>
-                    </div>
-                </div>
-                <a href="checkout-payment.html" class="cta summary-btn">Go to Payment</a>
-            </section>
-        </div>
         
+                    <div class="product-added">
+                        <img src="images/product-img.jpg" alt="Black seasonal spring rain jacket">
+                        <div class="content">
+                            <h3>RainyDays</h3>
+                            <p>Seasonal spring rain jacket</p>
+                        </div>
+                        <p>Yellow</p>
+                        <select name="size" id="size">
+                            <option value="size">Size</option>
+                            <option value="x-small">X-small</option>
+                            <option value="small">Small</option>
+                            <option value="medium">Medium</option>
+                            <option value="Large">Large</option>
+                        </select>
+                        <select name="quantity" id="quantity">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <p>1999,-</p>
+                        <i class="fas fa-trash-alt"></i>
+                    </div>
+                </section>
+        
+                <section class="summmary__section">
+                    <div class="summary">
+                        <h2>Order summary</h2>
+                        <div class="summary-row">
+                            <p>Products</p>
+                            <p>3998 NOK</p>
+                        </div>
+                        <div class="summary-row">
+                            <p>Shipping costs</p>
+                            <p>0 NOK</p>
+                        </div>
+                        <div class="summary-row">
+                            <p><strong>Total Prize</strong></p>
+                            <p>3998 NOK</p>
+                        </div>
+                    </div>
+                    <a href="checkout-payment.html" class="cta summary-btn">Go to Payment</a>
+                </section>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="footer__content">

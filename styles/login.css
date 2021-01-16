@@ -1,40 +1,25 @@
-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 70px auto;
-    max-width: 60vw;
+.login__main {
     min-height: 67vh;
-    box-shadow: 2px 2px 2px  2px rgb(185, 177, 177);
+    margin: 70px 0px;
 }
 
 .login__info {
-    background-image: url("../images/login-background.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: left;
-    min-width: 100%;
-    position: relative;
+    display: none;
 }
 
-.login__text {
-   max-width: 50%;
-   position: absolute;
-   top: 20px;
-   left: 20px;
-
-}
 .login__form {
     max-width: 40vw;
+    min-width: 100px;
     margin: auto;
     display: flex;
     text-align: center;
+    justify-content: center;
 }
 
 .login__form > * {
     display: flex;
     flex: 1;
     flex-direction: column;
-    max-width: 20vw;
 }
 
 .login__form p {

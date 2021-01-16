@@ -1,7 +1,6 @@
 .favorites {
-    grid-template-columns: repeat(2, 1fr);
     max-width: 40vw;
-    margin: 50px 100px;
+    margin: 50px auto;
 }
 .popular-products h1{
     grid-column: -1/1;

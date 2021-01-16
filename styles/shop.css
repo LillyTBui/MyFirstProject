@@ -48,11 +48,5 @@ select {
 
 .popular-products {
     grid-area: products;
-    display: grid;
-    grid-template-columns: 1fr;
-    max-width: 1500px;
-    margin: 0px;
-    grid-gap: 15px;
-    font-size: 0.9em;
 }
 
