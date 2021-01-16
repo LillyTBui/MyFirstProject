@@ -1,11 +1,3 @@
-.product__content {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-areas: 
-    'categories filter'
-    'categories products';
-    margin: 20px 60px 50px 0px;
-}
 
 
 .dropdown {
@@ -50,19 +42,14 @@ select {
     min-width: 150px;;
 }
 
-.filter {
-    grid-area: filter;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: space-between;
-    align-content: end;
-    margin: 30px 0px 5px 0px;
+.filter { 
+    display: none;
 }
 
 .popular-products {
     grid-area: products;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
     max-width: 1500px;
     margin: 0px;
     grid-gap: 15px;
