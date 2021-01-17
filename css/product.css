@@ -1,0 +1,95 @@
+/** @format */
+
+.seasonal-autumn__main {
+  margin: 50px 20px;
+}
+
+.product__links {
+  font-size: 0.9em;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 65vh;
+}
+
+.seasonal-autumn__products-wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "img1 img1"
+    "img2 img3";
+  gap: 0px 8px;
+  margin-top: 40px;
+}
+
+.product__img {
+  max-width: 700px;
+}
+
+.img1 {
+  grid-area: img1;
+}
+
+.img2 {
+  grid-area: img2;
+  max-width: 150px;
+}
+
+.img3 {
+  grid-area: img3;
+  max-width: 150px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.seasonal-autumn {
+  max-width: 500px;
+  display: flex;
+  margin-top: 50px;
+}
+
+.seasonal-autumn > * {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.circles {
+  display: flex;
+  margin-bottom: 10px;
+}
+.yellow {
+  color: yellow;
+}
+
+.red {
+  color: red;
+}
+
+.blue {
+  color: blue;
+}
+
+select {
+  padding: 5px;
+  margin: 5px 0px 10px 0px;
+  border-radius: 20px;
+  border: 1px solid black;
+  font-weight: bold;
+  text-align-last: center;
+}
+
+.product__cta {
+  display: flex;
+}
+
+.product__cta > * {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}

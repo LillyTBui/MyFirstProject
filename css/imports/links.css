@@ -1,0 +1,83 @@
+/** @format */
+
+.active {
+  border-bottom: 2px solid black;
+  padding-bottom: 3px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-family: "Arial", "Lucida grande", Georgia, "Times New Roman", Times,
+    serif;
+}
+
+.cta {
+  background-color: var(--color-yellow);
+  padding: 8px 23px;
+  border-radius: 30px;
+  color: white;
+  transition-duration: 1s;
+  font-weight: bold;
+}
+
+.cta:hover {
+  opacity: 0.8;
+}
+
+.cta-green {
+  background-color: var(--color-dark-blue);
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  margin: 10px auto;
+}
+
+.btn-dark-green {
+  background-color: var(--color-dark-green);
+  border-radius: 20px;
+  max-width: 250px;
+  padding: 10px 30px;
+  color: white;
+  border: none;
+  font-weight: bold;
+  margin: 20px auto;
+}
+
+.cta-cart {
+  text-align: center;
+  border-radius: 20px;
+  padding: 5px 0px;
+  margin: 0px 5px 0px 0px;
+}
+
+.product-heart {
+  border: 2px solid var(--color-dark-green);
+  border-radius: 20px;
+}
+
+.heart-icon {
+  text-align: center;
+  margin: auto;
+  color: var(--color-dark-green);
+}
+.shop {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+i {
+  font-size: large;
+  margin: 0px 10px 0px 0px;
+}
+
+.send-button {
+  background-color: var(--color-yellow);
+  min-width: 120px;
+  border: none;
+  color: white;
+  margin: 20px auto;
+  font-weight: bold;
+}

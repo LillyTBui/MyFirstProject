@@ -1,4 +1,6 @@
-
+.form_size {
+    min-width: 500px;
+}
 .payment-help {
     margin: auto 0px;
 }
@@ -10,7 +12,7 @@
 }
 
 .payment-icon {
-    color: #145c75;
+    color: var(--color-dark-blue);
 }
 
 .payment-icon_next {
