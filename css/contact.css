@@ -19,6 +19,7 @@
     top: 0px;
   }
 }
+
 .contact__social {
   margin-top: 50px;
 }
@@ -40,7 +41,7 @@ fieldset {
   border-radius: 5px;
 }
 
-.form-wrapper {
+.contact__form-wrapper {
   display: flex;
   flex: 1;
   flex-direction: column;

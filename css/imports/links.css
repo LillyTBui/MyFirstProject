@@ -8,8 +8,7 @@
 a {
   text-decoration: none;
   color: black;
-  font-family: "Arial", "Lucida grande", Georgia, "Times New Roman", Times,
-    serif;
+  font-family: "Arial", "Lucida grande", Georgia, "Times New Roman", Times, serif;
 }
 
 .cta {
@@ -34,7 +33,7 @@ a {
   margin: 10px auto;
 }
 
-.btn-dark-green {
+.cta-dark-green {
   background-color: var(--color-dark-green);
   border-radius: 20px;
   max-width: 250px;
@@ -52,25 +51,26 @@ a {
   margin: 0px 5px 0px 0px;
 }
 
-.product-heart {
-  border: 2px solid var(--color-dark-green);
-  border-radius: 20px;
-}
-
 .heart-icon {
   text-align: center;
   margin: auto;
   color: var(--color-dark-green);
 }
-.shop {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-}
 
 i {
   font-size: large;
   margin: 0px 10px 0px 0px;
+}
+
+.product-heart {
+  border: 2px solid var(--color-dark-green);
+  border-radius: 20px;
+}
+
+.shop {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
 }
 
 .send-button {

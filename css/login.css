@@ -1,67 +1,70 @@
 .login__main {
-    min-height: 67vh;
-    margin: 70px 0px;
+  min-height: 67vh;
+  margin: 70px 0px;
 }
 
 .login__info {
-    display: none;
+  display: none;
 }
 
 .login__form {
-    max-width: 40vw;
-    min-width: 100px;
-    margin: auto;
-    display: flex;
-    text-align: center;
-    justify-content: center;
+  max-width: 40vw;
+  min-width: 100px;
+  margin: auto;
+  display: flex;
+  text-align: center;
+  justify-content: center;
 }
 
 .login__form > * {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
 }
 
 .login__form p {
-    font-size: 0.8em;
-}
-label, .remember {
-    text-align: left;
+  font-size: 0.8em;
 }
 
-input, p, .remember {
-    padding: 5px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+label,
+.remember {
+  text-align: left;
+}
+
+input,
+p,
+.remember {
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .remember {
-    padding-left: 0px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: space-between;
+  padding-left: 0px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
 }
 
 .forgot-password {
-    text-decoration: underline;
-    font-size: 0.9em;
-    text-align: right;
-    font-family: "Arial";
-    margin-top: 6px;
+  text-decoration: underline;
+  font-size: 0.9em;
+  text-align: right;
+  font-family: "Arial";
+  margin-top: 6px;
 }
 
 #login-button {
-    border-radius: 0px;
-    margin: 0px;
-    padding: 10px;
-    font-family: "Lucida Grande", "Lucida Sans", "Lucida Sans Regular",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  border-radius: 0px;
+  margin: 0px;
+  padding: 10px;
+  font-family: "Lucida Grande", "Lucida Sans", "Lucida Sans Regular", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .facebook-btn {
-    background-color: #3b5998;
-    color: white;
-    font-size: 0.8em;
-    padding: 10px;
-    letter-spacing: 1px;
+  background-color: #3b5998;
+  color: white;
+  font-size: 0.8em;
+  padding: 10px;
+  letter-spacing: 1px;
 }

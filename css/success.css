@@ -1,32 +1,32 @@
-
 .success__main {
-    display: flex;
-    margin: auto;
-    flex-direction:column;
-    text-align: center;
-    min-height: 80vh;
-    min-width: 30vw;
-    padding: 20px;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  text-align: center;
+  min-height: 80vh;
+  min-width: 30vw;
+  padding: 20px;
 }
 
 .contact__success {
-    margin: 70px auto 0px auto;
-    min-height: 70vh;
-}
-.icon-success {
-    margin: 50px;
-    color: #08BA5B;
+  margin: 70px auto 0px auto;
+  min-height: 70vh;
 }
 
-#checkout-help{
-    margin: auto 0px;
+.icon-success {
+  margin: 50px;
+  color: #08ba5b;
+}
+
+#checkout-help {
+  margin: auto 0px;
 }
 
 .checkout-cta {
-    display: flex;
+  display: flex;
 }
 
 .check-btn {
-    flex: 1;
-    margin: 20px 5px;
+  flex: 1;
+  margin: 20px 5px;
 }

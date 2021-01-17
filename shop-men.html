@@ -1,152 +1,155 @@
 <!-- @format -->
-<!-- @format -->
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Rainydays | Shop-men</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="List of products for men." />
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/shop.css" rel="stylesheet" />
     <link href="css/media.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/b9235904b4.js" crossorigin="anonymous"></script>
-</head>
-<body>
-  <header>
-    <a href="index.html"><img src="images/RainyDays_Logo.png" class="logo"></a>
-    <label for="hamburger-menu"><i class="fas fa-bars" id="hamburger-icon"></i></label>
-    <input type="checkbox" id="hamburger-menu">
-    <nav>
-      <ul>
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><img src="images/RainyDays_Logo.png" class="logo" /></a>
+      <label for="hamburger-menu"><i class="fas fa-bars" id="hamburger-icon"></i></label>
+      <input type="checkbox" id="hamburger-menu" />
+      <nav>
+        <ul>
           <li><a href="shop-men.html" class="active">Men</a></li>
           <li><a href="shop-women.html">Women</a></li>
           <li><a href="about-us.html">About Us</a></li>
           <li><a href="contact-us.html">Contact Us</a></li>
-      </ul>
-      <div class="search-wrapper">
-        <li><input type="text" class="search-box" placeholder=""></li>
-        <i class="fas fa-search fa-xs search-icon"></i>
-      </div>
-      <div class="icon-wrapper">
-        <li><a href="login.html"><i class="far fa-user icon"></i></a></li>
-        <li><a href="favorites.html"><i class="far fa-heart icon"></i></a></li>
-        <li><a href="shopping-bag.html"><i class="fas fa-shopping-cart icon" ></i></a></li>
-      </div>
-    </nav>
-  </header>
-    
-    <main>
-        <div class="shop-men__welcome"></div>
-        <div class="product__content">
-            <section class="categories">
-                    <h1>Men</h1>
-                    <h2>Categories</h2>
-                <form method="GET">
-                    <div class="categories-wrapper">
-                        <select name="size" id="size" class="dropdown">
-                            <option value="size">Size</option>
-                            <option value="x-small">X-small</option>
-                            <option value="small">Small</option>
-                            <option value="medium">Medium</option>
-                            <option value="Large">Large</option>
-                        </select>
-                        <select name="color" id="color" class="dropdown">
-                            <option value="color">Color</option>
-                            <option value="black">Black</option>
-                            <option value="blue">Blue</option>
-                            <option value="green">Green</option>
-                            <option value="red">Red</option>
-                        </select>
-                        <select name="qualities" id="qualities" class="dropdown">
-                            <option value="qualities">Qualities</option>
-                            <option value="water-resistant">Water resistant</option>
-                            <option value="waterproof">Waterproof</option>
-                            <option value="wind-resistant">Wind resistant</option>
-                            <option value="windbreaker">Windbreaker</option>
-                        </select>
-                        <select name="prices" id="prices"class="dropdown" >
-                            <option value="prices">Prices</option>
-                            <option value="$0-$100">$0-$100</option>
-                            <option value="$100-$200">$100-$200</option>
-                            <option value="$200-$300">$200-$300</option>
-                            <option value="over">Over $300</option>
-                        </select>
-                        <input type="submit" name="save-changes" value="Save changes" class="cta-green">
-                    </div>
-                </form>
-            </section>
-            <div class="filter">
-                <form>
-                    <div>
-                        <label for="number">Show number of products</label>
-                        <select name="number" id="number">
-                            <option value="4">4</option>
-                            <option value="10">10</option>
-                            <option value="25">25</option>
-                        </select>
-                    </div>
-                </form>
-                <form>
-                    <div>
-                        <label for="popular">Sort by</label>
-                        <select name="popular" id="popular">
-                            <option value="popular">Popular</option>
-                            <option value="lowest">Lowest price</option>
-                            <option value="highest">Highest price</option>
-                        </select>
-                    </div>
-                </form>
-            </div>
-            <section class="popular-products">
-                <a href="products/seasonal-autumn-black.html">
-                  <div>
-                    <img src="../images/product-img.jpg" alt="Yellow seasonal autumn rain jacket">
-                    <h3>RainyDays</h3>
-                    <p>Seasonal autumn rain jacket</p>
-                    <p>1999,-</p>
-                  </div>
-                </a>
-                <a href="products/seasonal-autumn-black.html">
-                  <div>
-                    <img src="../images/product-img.jpg" alt="Black seasonal spring rain jacket">
-                    <h3>RainyDays</h3>
-                    <p>Seasonal spring rain jacket</p>
-                    <p>1999,-</p>
-                  </div>
-                </a>
-                <a href="products/seasonal-autumn-black.html">
-                  <div>
-                    <img src="../images/product-img.jpg" alt="Blue seasonal winter rain jacket">
-                    <h3>RainyDays</h3>
-                    <p>Seasonal winter rain jacket</p>
-                    <p>2999,-</p>
-                  </div>
-                </a>
-                <a href="products/seasonal-autumn-black.html">
-                  <div>
-                    <img src="../images/product-img.jpg" alt="Red seasonal outdoor">
-                    <h3>RainyDays</h3>
-                    <p>Seasonal outdoor</p>
-                    <p>2999,-</p>
-                  </div>
-                </a>
-          </section>
+        </ul>
+        <div class="search-wrapper">
+          <li><input type="text" class="search-box" placeholder="" /></li>
+          <i class="fas fa-search fa-xs search-icon"></i>
         </div>
-        
+        <div class="icon-wrapper">
+          <li>
+            <a href="login.html"><i class="far fa-user icon"></i></a>
+          </li>
+          <li>
+            <a href="favorites.html"><i class="far fa-heart icon"></i></a>
+          </li>
+          <li>
+            <a href="shopping-bag.html"><i class="fas fa-shopping-cart icon"></i></a>
+          </li>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="shop-men__welcome"></div>
+      <div class="product__content">
+        <section class="categories">
+          <h1>Men</h1>
+          <h2>Categories</h2>
+          <form method="GET">
+            <div class="categories-wrapper">
+              <select name="size" id="size" class="dropdown">
+                <option value="size">Size</option>
+                <option value="x-small">X-small</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="Large">Large</option>
+              </select>
+              <select name="color" id="color" class="dropdown">
+                <option value="color">Color</option>
+                <option value="black">Black</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <option value="red">Red</option>
+              </select>
+              <select name="qualities" id="qualities" class="dropdown">
+                <option value="qualities">Qualities</option>
+                <option value="water-resistant">Water resistant</option>
+                <option value="waterproof">Waterproof</option>
+                <option value="wind-resistant">Wind resistant</option>
+                <option value="windbreaker">Windbreaker</option>
+              </select>
+              <select name="prices" id="prices" class="dropdown">
+                <option value="prices">Prices</option>
+                <option value="$0-$100">$0-$100</option>
+                <option value="$100-$200">$100-$200</option>
+                <option value="$200-$300">$200-$300</option>
+                <option value="over">Over $300</option>
+              </select>
+              <input type="submit" name="save-changes" value="Save changes" class="cta-green" />
+            </div>
+          </form>
+        </section>
+        <div class="product-filter">
+          <form>
+            <div>
+              <label for="number">Show number of products</label>
+              <select name="number" id="number">
+                <option value="4">4</option>
+                <option value="10">10</option>
+                <option value="25">25</option>
+              </select>
+            </div>
+          </form>
+          <form>
+            <div>
+              <label for="popular">Sort by</label>
+              <select name="popular" id="popular">
+                <option value="popular">Popular</option>
+                <option value="lowest">Lowest price</option>
+                <option value="highest">Highest price</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <section class="popular-products">
+          <a href="products/seasonal-autumn-black.html">
+            <div>
+              <img src="images/product-img.jpg" alt="Yellow seasonal autumn rain jacket" />
+              <h3>RainyDays</h3>
+              <p>Seasonal autumn rain jacket</p>
+              <p>1999,-</p>
+            </div>
+          </a>
+          <a href="products/seasonal-autumn-black.html">
+            <div>
+              <img src="images/product-img.jpg" alt="Black seasonal spring rain jacket" />
+              <h3>RainyDays</h3>
+              <p>Seasonal spring rain jacket</p>
+              <p>1999,-</p>
+            </div>
+          </a>
+          <a href="products/seasonal-autumn-black.html">
+            <div>
+              <img src="images/product-img.jpg" alt="Blue seasonal winter rain jacket" />
+              <h3>RainyDays</h3>
+              <p>Seasonal winter rain jacket</p>
+              <p>2999,-</p>
+            </div>
+          </a>
+          <a href="products/seasonal-autumn-black.html">
+            <div>
+              <img src="images/product-img.jpg" alt="Red seasonal outdoor" />
+              <h3>RainyDays</h3>
+              <p>Seasonal outdoor</p>
+              <p>2999,-</p>
+            </div>
+          </a>
+        </section>
+      </div>
     </main>
     <footer>
-        <div class="footer__content">
-            <a href="contact-us.html">Help</a>
-          </div>
-          <div class="footer__content">
-            <p>Copyright &copy;</p>
-          </div>
-          <div class="footer__content footer__icons">
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-youtube"></i>
-          </div>
+      <div class="footer__content">
+        <a href="contact-us.html">Help</a>
+      </div>
+      <div class="footer__content">
+        <p>Copyright &copy;</p>
+      </div>
+      <div class="footer__content footer__icons">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-youtube"></i>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
