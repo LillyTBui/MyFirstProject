@@ -79,9 +79,9 @@
   /* Contact us */
   .contact__main {
     display: flex;
-    margin: 120px auto;
+    margin: 80px auto;
     max-width: 1300px;
-    height: 58vh;
+    padding: 0px 50px;
   }
 
   .contact__info,
@@ -105,11 +105,6 @@
     display: flex;
     justify-content: center;
     margin: 60px 0px;
-  }
-
-  .payment-info {
-    margin: 40px 15%;
-    max-width: 20vw;
   }
 
   /* Checkout success */
@@ -136,11 +131,6 @@
     padding: 20px 0px;
   }
 
-  /* Checkout payment*/
-  .payment-info {
-    margin: 40px 25%;
-  }
-
   /* Checkout success */
   .success__main {
     max-width: 60vw;
@@ -148,10 +138,6 @@
 }
 
 @media (min-width: 1000px) {
-  /* Checkout payment */
-  .payment-info {
-    margin: 40px 28%;
-  }
 
   /* Checkout success */
   .success__main {
@@ -182,7 +168,7 @@
   }
 
   .icon-wrapper {
-    margin: 0px 0px 0px 160px;
+    margin: 0px 0px 0px 100px;
   }
 
   nav {
@@ -204,6 +190,7 @@
     position: relative;
     max-width: 60px;
     display: inline-block;
+    margin: 50px;
   }
 
   .search-box {
@@ -215,8 +202,8 @@
 
   .search-icon {
     position: absolute;
-    left: 175px;
-    top: 28px;
+    left: 130px;
+    top: 5px;
   }
 
   #hamburger-icon {
@@ -234,9 +221,9 @@
     background-position: center;
     position: absolute;
     width: 36%;
-    height: 70%;
-    top: 15%;
-    right: 4vw;
+    height: 90%;
+    top: 5%;
+    right: 90px;
     bottom: 25vw;
   }
 
@@ -247,6 +234,7 @@
   .explore {
     grid-template-columns: repeat(2, 1fr);
     margin: 50px auto;
+    padding: 30px;
   }
 
   .popular-products {
@@ -277,10 +265,6 @@
   .payment-status {
     margin: 60px auto;
     max-width: 90vw;
-  }
-
-  .payment-info {
-    margin: 40px 34%;
   }
 
   /* Seasonal autumn black */
@@ -365,9 +349,3 @@
   }
 }
 
-@media (min-width: 1800px) {
-  /* Checkout payment */
-  .payment-info {
-    margin: 40px auto;
-  }
-}
