@@ -9,22 +9,35 @@
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/payment.css" rel="stylesheet" />
     <link href="css/media.css" rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/b9235904b4.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/b9235904b4.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- Hotjar Tracking Code for https://admiring-haibt-3ff3c7.netlify.app/ -->
-<script>
-  (function(h,o,t,j,a,r){
-      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:2390664,hjsv:6};
-      a=o.getElementsByTagName('head')[0];
-      r=o.createElement('script');r.async=1;
-      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-      a.appendChild(r);
-  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 2390664, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
   </head>
   <body>
     <header>
-      <a href="index.html"><img src="images/RainyDays_Logo.png" class="logo" alt="RainyDays's logo" /></a>
+      <a href="index.html"
+        ><img
+          src="images/RainyDays_Logo.png"
+          class="logo"
+          alt="RainyDays's logo"
+      /></a>
       <a href="contact-us.html" class="payment-help">Help with payment</a>
     </header>
     <main>
@@ -49,19 +62,45 @@
         <form>
           <h2>Add a payment method</h2>
           <input type="text" name="fullname" placeholder="Name of card" />
-          <input type="number" name="card-number" placeholder="Card number" max="16" />
+          <input
+            type="number"
+            name="card-number"
+            placeholder="Card number"
+            max="16"
+          />
           <div class="mm-yy">
-            <input type="number" id="name" name="month" placeholder="MM" max="2" />
-            <input type="number" id="year" name="year" placeholder="YY" max="2" />
+            <input
+              type="number"
+              id="name"
+              name="month"
+              placeholder="MM"
+              max="2"
+            />
+            <input
+              type="number"
+              id="year"
+              name="year"
+              placeholder="YY"
+              max="2"
+            />
           </div>
-          <input type="number" name="security-code" placeholder="Security code" max="3" />
+          <input
+            type="number"
+            name="security-code"
+            placeholder="Security code"
+            max="3"
+          />
           <div class="payment-checkbox">
             <input type="checkbox" name="checkbox-card" />
             <label for="checkbox-card">Remember this card</label>
           </div>
           <div class="payment-cta">
-            <a href="shopping-bag.html" class="cta-dark-green payment-btn back">Back</a>
-            <a href="checkout-success.html" class="cta-dark-green payment-btn">Save & Continue</a>
+            <a href="shopping-bag.html" class="cta-dark-green payment-btn back"
+              >Back</a
+            >
+            <a href="checkout-success.html" class="cta-dark-green payment-btn"
+              >Save & Continue</a
+            >
           </div>
         </form>
       </div>
