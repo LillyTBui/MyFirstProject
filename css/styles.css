@@ -121,3 +121,9 @@ footer {
 footer a {
   color: white;
 }
+
+/* @@@@@@@@ */
+.example-image{
+  background-size: cover;
+  height: 400px;
+}

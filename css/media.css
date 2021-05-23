@@ -164,7 +164,7 @@
   header {
     display: flex;
     justify-content: space-between;
-    margin: 20px 70px;
+    margin: 0px 70px;
   }
 
   .icon-wrapper {
