@@ -57,8 +57,22 @@
     margin: 50px 20px;
   }
 
+  .shop-section{
+    margin: 0 auto;
+  }
+
   .product {
     margin-top: 40px;
+  }
+
+  /* Product */
+  .main-wrapper{
+    flex-direction: row;
+    margin-top: 50px;
+  }
+
+  .product__links {
+    margin-left: 40px;
   }
 
   footer {
@@ -76,6 +90,10 @@
     gap: 30px;
   }
 
+  .shopping-bag__main {
+    margin: 20px 50px;
+  }
+
   /* Contact us */
   .contact__main {
     display: flex;
@@ -84,9 +102,9 @@
     padding: 0px 50px;
   }
 
-  .contact__info,
   .contact__form {
-    padding: 0px 25px;
+    margin: 0px;
+    max-width: 500px;
   }
 
   /* Favorites */
@@ -112,17 +130,13 @@
     max-width: 70vw;
   }
 
-  /* Seasonal autumn black */
+  /* Product */
   .product__links {
     font-size: 1em;
   }
 }
 
 @media (min-width: 800px) {
-  /* Shopping-bag */
-  .shopping-bag__main {
-    margin: 100px;
-  }
 
   .product-added {
     display: flex;
@@ -135,6 +149,16 @@
   .success__main {
     max-width: 60vw;
   }
+
+  /* Product*/
+  .main-wrapper{
+    max-width: 1000px;
+  }
+
+  .product-details__image{
+    height: 400px;
+    width: 300px;
+  }
 }
 
 @media (min-width: 1000px) {
@@ -144,27 +168,22 @@
     max-width: 40vw;
   }
 
-  /* Seasonal autumn black */
-  .main-wrapper {
-    flex-direction: row;
-  }
-
-  .seasonal-autumn__products-wrapper {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-rows: auto 1fr;
-    grid-template-areas:
-      "img2 img1"
-      "img3 img1";
-    gap: 0px 8px;
+  /* Product */
+  .seasonal-autumn{
+    max-width: 400px;
   }
 }
 
 @media (min-width: 1100px) {
+  /* Shopping-bag */
+  .shopping-bag__main {
+    margin: 100px;
+  }
+  
   header {
     display: flex;
     justify-content: space-between;
-    margin: 20px 70px;
+    margin: 0px 70px;
   }
 
   .icon-wrapper {
@@ -267,7 +286,7 @@
     max-width: 90vw;
   }
 
-  /* Seasonal autumn black */
+  /* Product */
   .product__img,
   .seasonal-autumn {
     display: flex;
@@ -288,6 +307,10 @@
 
   .popular-products {
     margin: 50px auto;
+  }
+
+  .shop-section{
+    margin: 0 auto;
   }
 
   /* Login  */
@@ -316,13 +339,7 @@
     left: 20px;
   }
 
-  /* Seasonal autumn black */
-  .seasonal-autumn__main {
-    margin-top: 50px;
-    margin-left: 100px;
-    margin: 50px 0px 50px 100px;
-  }
-
+  /* Product */
   .seasonal-autumn {
     margin: 0px 100px;
   }

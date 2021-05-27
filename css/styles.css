@@ -71,6 +71,15 @@ nav li {
 }
 
 /* Popular products */
+.popular-section h2{
+  text-align: center;
+  border-width: 0px 0px 1px 0px;
+  border-style: solid;
+  padding-bottom: 10px;
+  margin: 40px auto 0px auto;
+  max-width: 220px;
+}
+
 .popular-products {
   display: grid;
   grid-template-columns: 1fr;
@@ -78,6 +87,18 @@ nav li {
   margin: 50px 20px;
   gap: 15px;
   font-size: 0.9em;
+}
+
+.product{
+  text-align: center;
+}
+
+.product-image{
+  background-size: cover;
+  background-position:center;
+  height: 300px;
+  width: 200px;
+  margin: 0 auto;
 }
 
 .popular-products h2,
@@ -121,3 +142,4 @@ footer {
 footer a {
   color: white;
 }
+

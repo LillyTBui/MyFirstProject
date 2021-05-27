@@ -49,3 +49,7 @@ select {
 .popular-products {
   grid-area: products;
 }
+
+.shop-section{
+  margin: 30px auto;
+}

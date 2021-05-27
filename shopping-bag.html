@@ -13,22 +13,6 @@
       src="https://kit.fontawesome.com/b9235904b4.js"
       crossorigin="anonymous"
     ></script>
-    <!-- Hotjar Tracking Code for https://admiring-haibt-3ff3c7.netlify.app/ -->
-    <script>
-      (function (h, o, t, j, a, r) {
-        h.hj =
-          h.hj ||
-          function () {
-            (h.hj.q = h.hj.q || []).push(arguments);
-          };
-        h._hjSettings = { hjid: 2390664, hjsv: 6 };
-        a = o.getElementsByTagName("head")[0];
-        r = o.createElement("script");
-        r.async = 1;
-        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-        a.appendChild(r);
-      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
-    </script>
   </head>
   <body>
     <header>
@@ -66,80 +50,11 @@
       <div class="shopping-bag__main">
         <h1>Your shopping bag</h1>
         <h2>Products</h2>
+        <div class="total-products"></div>
         <div class="product__wrapper">
-          <section class="product__info">
-            <div class="product-added first-product-added">
-              <img
-                src="images/product-img.jpg"
-                alt="Yellow seasonal autumn rain jacket"
-              />
-              <div class="product__description">
-                <h3>RainyDays</h3>
-                <p>Seasonal autumn rain jacket</p>
-              </div>
-              <p>Black</p>
-              <select name="size" id="size" class="dropdown">
-                <option value="size">Size</option>
-                <option value="x-small">X-small</option>
-                <option value="small">Small</option>
-                <option value="medium">Medium</option>
-                <option value="Large">Large</option>
-              </select>
-              <select name="quantity" id="quantity">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-              </select>
-              <p>1999,-</p>
-              <i class="fas fa-trash-alt"></i>
-            </div>
-            <div class="product-added">
-              <img
-                src="images/product-img.jpg"
-                alt="Black seasonal spring rain jacket"
-              />
-              <div class="product__description">
-                <h3>RainyDays</h3>
-                <p>Seasonal spring rain jacket</p>
-              </div>
-              <p>Yellow</p>
-              <select name="size" id="size">
-                <option value="size">Size</option>
-                <option value="x-small">X-small</option>
-                <option value="small">Small</option>
-                <option value="medium">Medium</option>
-                <option value="Large">Large</option>
-              </select>
-              <select name="quantity" id="quantity">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-              </select>
-              <p>1999,-</p>
-              <i class="fas fa-trash-alt"></i>
-            </div>
-          </section>
-          <section class="summmary__section">
-            <div class="summary">
-              <h2>Order summary</h2>
-              <div class="summary-row">
-                <p>Products</p>
-                <p>3998 NOK</p>
-              </div>
-              <div class="summary-row">
-                <p>Shipping costs</p>
-                <p>0 NOK</p>
-              </div>
-              <div class="summary-row">
-                <p><strong>Total Prize</strong></p>
-                <p>3998 NOK</p>
-              </div>
-            </div>
-            <a href="checkout-payment.html" class="cta summary-btn"
-              >Go to Payment</a
-            >
-          </section>
         </div>
+        <section class="summmary__section">
+        </section>
       </div>
     </main>
     <footer>
@@ -155,5 +70,6 @@
         <i class="fab fa-youtube"></i>
       </div>
     </footer>
+    <script src="js/shoppingbag.js" type="module"></script>
   </body>
 </html>
