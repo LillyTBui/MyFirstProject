@@ -1,21 +1,5 @@
 /** @format */
 
-@media (min-width: 400px) {
-  /* Checkout payment */
-  .mm-yy {
-    display: flex;
-  }
-
-  #name {
-    flex: 1;
-    margin-right: 5px;
-  }
-
-  #year {
-    flex: 1;
-  }
-}
-
 @media (min-width: 650px) {
   header {
     margin: 20px 50px;

@@ -17,17 +17,14 @@ let validEmail = false;
 let validSubject = false;
 let validAdress = false;
 
-
 nameElement.onblur = function(){
-    if(nameElement.value.trim().length > 0){
-        if (nameElement.value.trim().length > 3) {
-            nameError.style.display = "none";
-            validName = true;
-        }else {
-            nameError.style.display = "block";
-            validName = false;
-        }
-    }
+    if (nameElement.value.trim().length > 3 && hasNumber(nameElement.value) === false) {
+        nameError.style.display = "none";
+        validName = true;
+    }else {
+        nameError.style.display = "block";
+        validName = false;
+    }  
 }
 
 nameElement.onfocus = function(){
@@ -38,14 +35,12 @@ nameElement.onfocus = function(){
 
 
 email.onblur = function(){
-    if(email.value.trim().length > 0){
-        if (validateEmail(email.value) === true) {
-            emailError.style.display = "none";
-            validEmail = true;
-        }else {
-            emailError.style.display = "block";
-            validEmail = false;
-        }
+    if (validateEmail(email.value) === true) {
+        emailError.style.display = "none";
+        validEmail = true;
+    }else {
+        emailError.style.display = "block";
+        validEmail = false;
     }
 }
 
@@ -74,14 +69,12 @@ subject.onfocus = function(){
 }
 
 address.onblur = function(){
-    if(address.value.trim().length > 0){
-        if (address.value.trim().length >= 25) {
-            addressError.style.display = "none";
-            validAdress = true;
-          } else {
-            addressError.style.display = "block";
-            validAdress = false;
-          }
+    if (address.value.trim().length >= 25) {
+        addressError.style.display = "none";
+        validAdress = true;
+    } else {
+        addressError.style.display = "block";
+        validAdress = false;
     }
 }
 
@@ -130,6 +123,10 @@ function validateForm(event){
     if(validName && validEmail && validSubject && validAdress){
         window.location.href="contact-success.html";
     }
+}
+
+function hasNumber(myString) {
+    return /\d/.test(myString);
 }
 
 form.addEventListener("submit", validateForm);
