@@ -4,9 +4,7 @@ const productDetailsContainer = document.querySelector(".product-specification")
 const productImageContainer = document.querySelector(".product__img2");
 const breadcrumb = document.querySelector(".breadcrumb");
 const button = document.querySelector(".cart-btn");
-
 const cartList = document.querySelector(".cart-wrapper");
-let cartArray = [];
 let totalAddedItems = 0;
 
 function createDetails(product){
@@ -33,19 +31,15 @@ function addButton(item){
     button.innerHTML = `<button class="cta-green cta-cart" data-product="${item.id}">Add to cart</button>`;
 }
 
+updateBreadcrumb(item);
+createDetails(item);
+addImage(item);
 addButton(item);
+
 const buttonToAdd = document.querySelector(".cta-cart");
 
 buttonToAdd.onclick = function(event){
-    cartArray.push(item);
-    localStorage.setItem("cartList", JSON.stringify(cartArray));
-}
-
-
-/*
-button.onclick = function(event){
     totalAddedItems ++;
-    console.log(totalAddedItems);
     showCart(item);
     const removeButton = document.querySelectorAll(".fa-times");
     removeButton.forEach(function(button){
@@ -55,9 +49,28 @@ button.onclick = function(event){
     })
     setTimeout(timer, 9000);
     cartList.style.display = "block";
-    cartArray.push(item);
-    localStorage.setItem("cartList", JSON.stringify(cartArray));
-}*/
+    const oldCart = JSON.parse(localStorage.getItem("cartList"));
+    /*let numbOfProduct = JSON.parse(localStorage.getItem("totProducts"));
+    console.log(numberOfProduct);
+    numbOfProduct++;
+    console.log(numbOfProduct);*/
+    console.log(oldCart);
+
+    if(oldCart === null ){
+        //let numberOfProduct = 1;
+        const newCart = [item];
+        localStorage.setItem("cartList", JSON.stringify(newCart));
+        //localStorage.setItem("totProducts", JSON.stringify(numberOfProduct));
+    }
+    else{
+        oldCart.push(item);
+        localStorage.setItem("cartList", JSON.stringify(oldCart));
+        //localStorage.setItem("totProduct", JSON.stringify(numbOfProduct));
+    }
+}
+
+//localStorage.removeItem("cartList");
+//localStorage.removeItem("totProduct");
 
 function showCart(cartItems){
     let totalPrice = cartItems.price*totalAddedItems;
@@ -77,7 +90,4 @@ function timer(){
     cartList.style.display = "none";
 }
 
-updateBreadcrumb(item);
-createDetails(item);
-addImage(item);
 
