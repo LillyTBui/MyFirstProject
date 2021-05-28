@@ -13,22 +13,6 @@
       src="https://kit.fontawesome.com/b9235904b4.js"
       crossorigin="anonymous"
     ></script>
-    <!-- Hotjar Tracking Code for https://admiring-haibt-3ff3c7.netlify.app/ -->
-    <script>
-      (function (h, o, t, j, a, r) {
-        h.hj =
-          h.hj ||
-          function () {
-            (h.hj.q = h.hj.q || []).push(arguments);
-          };
-        h._hjSettings = { hjid: 2390664, hjsv: 6 };
-        a = o.getElementsByTagName("head")[0];
-        r = o.createElement("script");
-        r.async = 1;
-        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-        a.appendChild(r);
-      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
-    </script>
   </head>
   <body>
     <header>
@@ -59,37 +43,41 @@
         <h1>Payment Method</h1>
       </div>
       <div class="payment-info">
-        <form>
+        <form id="paymentForm">
           <h2>Add a payment method</h2>
-          <input type="text" name="fullname" placeholder="Name of card" />
+          <input type="text" name="fullname" placeholder="Name of card" id="cardName"/>
+          <div class="payment__form-error" id="paymentNameError">Please enter your full name</div>
           <input
             type="number"
+            id="cardNumber"
             name="card-number"
             placeholder="Card number"
-            max="16"
+            
           />
+          <div class="payment__form-error" id="paymentCardError">Please enter a valid card number</div>
           <div class="mm-yy">
             <input
               type="number"
-              id="name"
+              id="month"
               name="month"
               placeholder="MM"
-              max="2"
             />
             <input
               type="number"
               id="year"
               name="year"
               placeholder="YY"
-              max="2"
             />
           </div>
+          <div class="payment__form-error" id="paymentMonthError">Please enter a valid month</div>
+          <div class="payment__form-error" id="paymentYearError">Please enter a valid year</div>
           <input
             type="number"
+            id="securityCode"
             name="security-code"
             placeholder="Security code"
-            max="3"
           />
+          <div class="payment__form-error" id="paymentSecurityError">Please enter a valid security code</div>
           <div class="payment-checkbox">
             <input type="checkbox" name="checkbox-card" />
             <label for="checkbox-card">Remember this card</label>
@@ -98,9 +86,10 @@
             <a href="shopping-bag.html" class="cta-dark-green payment-btn back"
               >Back</a
             >
-            <a href="checkout-success.html" class="cta-dark-green payment-btn"
+            <button class="cta-dark-green payment-btn">Save & Continue</button>
+            <!--<a href="checkout-success.html" class="cta-dark-green payment-btn"
               >Save & Continue</a
-            >
+            >--->
           </div>
         </form>
       </div>
@@ -118,5 +107,6 @@
         <i class="fab fa-youtube"></i>
       </div>
     </footer>
+    <script src="js/payment.js"></script>
   </body>
 </html>

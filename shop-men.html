@@ -52,35 +52,27 @@
         <section class="categories">
           <h1>Men</h1>
           <h2>Categories</h2>
-          <form method="GET">
+          <form method="GET" id="filter-form">
             <div class="categories-wrapper">
               <select name="size" id="size" class="dropdown">
                 <option value="size">Size</option>
-                <option value="x-small">X-small</option>
-                <option value="small">Small</option>
-                <option value="medium">Medium</option>
-                <option value="Large">Large</option>
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
               </select>
               <select name="color" id="color" class="dropdown">
-                <option value="color">Color</option>
-                <option value="black">Black</option>
-                <option value="blue">Blue</option>
-                <option value="green">Green</option>
-                <option value="red">Red</option>
-              </select>
-              <select name="qualities" id="qualities" class="dropdown">
-                <option value="qualities">Qualities</option>
-                <option value="water-resistant">Water resistant</option>
-                <option value="waterproof">Waterproof</option>
-                <option value="wind-resistant">Wind resistant</option>
-                <option value="windbreaker">Windbreaker</option>
+                <option value="Color">Color</option>
+                <option value="Black">Black</option>
+                <option value="Blue">Blue</option>
+                <option value="Green">Green</option>
+                <option value="Orange">Orange</option>
               </select>
               <select name="prices" id="prices" class="dropdown">
                 <option value="prices">Prices</option>
-                <option value="$0-$100">$0-$100</option>
-                <option value="$100-$200">$100-$200</option>
-                <option value="$200-$300">$200-$300</option>
-                <option value="over">Over $300</option>
+                <option value="minPrice">0-1000 NOK</option>
+                <option value="midPrice">1000-2000 NOK</option>
+                <option value="maxPrice">Over 2000 NOK</option>
               </select>
               <input
                 type="submit"
@@ -92,26 +84,20 @@
           </form>
         </section>
         <div class="product-filter">
-          <form>
-            <div>
-              <label for="number">Show number of products</label>
-              <select name="number" id="number">
-                <option value="4">4</option>
-                <option value="10">10</option>
-                <option value="25">25</option>
-              </select>
-            </div>
-          </form>
-          <form>
-            <div>
-              <label for="popular">Sort by</label>
-              <select name="popular" id="popular">
-                <option value="popular">Popular</option>
-                <option value="lowest">Lowest price</option>
-                <option value="highest">Highest price</option>
-              </select>
-            </div>
-          </form>
+          <div class="product__Number">
+          </div>
+          <div class="filter__popular">
+            <form>
+              <div>
+                <label for="popular">Sort by</label>
+                <select name="popular" id="popular">
+                  <option value="popular">Popular</option>
+                  <option value="lowest">Lowest price</option>
+                  <option value="highest">Highest price</option>
+                </select>
+              </div>
+            </form>
+          </div>
         </div>
         <section class="popular-section">
           <div class="popular-products shop-section"></div>

@@ -45,9 +45,14 @@
   text-align: center;
 }
 
+#paymentForm{
+  padding: 30px;
+  overflow: hidden;
+}
+
 input {
   margin: 3px 0px;
-  padding: 7px;
+  padding: 7px 0px;
 }
 
 .payment-checkbox {
@@ -67,6 +72,24 @@ input {
   max-width: 100%;
 }
 
+.mm-yy{
+  display:flex;
+}
+
+.mm-yy >*{
+  flex: 1;
+}
+
+#month {
+  margin-right: 5px;
+}
+
 .back {
   margin-right: 5px;
+}
+
+.payment__form-error {
+  display: none;
+  color: red;
+  margin-bottom: 6px;
 }
