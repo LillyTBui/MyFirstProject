@@ -25,6 +25,7 @@ a {
 }
 
 .cta-green {
+  cursor:pointer;
   background-color: var(--color-dark-blue);
   padding: 5px 10px;
   border-radius: 5px;
