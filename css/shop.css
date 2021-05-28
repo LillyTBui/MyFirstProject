@@ -42,8 +42,13 @@ select {
   min-width: 150px;
 }
 
-.product-filter {
+.product-filter form {
   display: none;
+}
+
+.product__Number {
+  margin: 5px auto;
+  text-align: center;
 }
 
 .popular-products {

@@ -2,11 +2,15 @@
 
 import { productArray } from "./constants/productList.js";
 const productContainer = document.querySelector(".popular-products");
+const numberOfProductContainer = document.querySelector(".product__Number");
 let isEmpty;
+let number;
 
 productArray.forEach(createHTML);
+numberOfProducts(4);
 
 function createHTML(product){
+  number++;
   isEmpty = false;
   productContainer.innerHTML += 
   `<a href="products/product.html" data-product=${product.id}>
@@ -50,6 +54,7 @@ form.addEventListener("submit", function(event){
   const colorChoice = color.options[color.selectedIndex];
   const priceChoice = price.options[price.selectedIndex];
   clearHTML();
+  number = 0;
   productArray.forEach(function(item){
     if(sizeChoice.value === "size" && colorChoice.value === "Color" && priceChoice.value === "prices") {
       createHTML(item);
@@ -99,10 +104,12 @@ form.addEventListener("submit", function(event){
   if(isEmpty === true){
     errorMessage();
   }
+
+  numberOfProducts(number);
+
 })
 
 function comparePrice(price){
-  console.log(price);
   if(price < 1000){
     calculatedPrice = "minPrice";
   }
@@ -113,4 +120,11 @@ function comparePrice(price){
     calculatedPrice = "maxPrice";
   }
   return calculatedPrice;
+}
+
+function numberOfProducts(number){
+  numberOfProductContainer.innerHTML = `
+  <div>
+    <p>Number of products: ${number}</p>
+  </div>`;
 }

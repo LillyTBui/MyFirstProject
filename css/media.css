@@ -78,6 +78,21 @@
     margin: 20px 50px;
   }
 
+  .product-filter{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 20px 0px 5px 0px;
+  }
+
+  .product__Number {
+    margin: 0px;
+  }
+
+  .product-filter form{
+    display: block;
+  }
+
   /* Contact us */
   .contact__main {
     display: flex;
@@ -247,16 +262,6 @@
   /* Favorites */
   .favorites {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* Shop */
-  .product-filter {
-    grid-area: filter;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: space-between;
-    align-content: end;
-    margin: 30px 0px 5px 0px;
   }
 
   /* Login */
