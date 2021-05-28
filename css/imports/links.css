@@ -82,3 +82,7 @@ i {
   margin: 20px auto;
   font-weight: bold;
 }
+
+.fas{
+  cursor: pointer;
+}
