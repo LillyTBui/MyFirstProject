@@ -53,3 +53,10 @@ select {
 .shop-section{
   margin: 30px auto;
 }
+
+.error-message{
+  font-weight: normal;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+}

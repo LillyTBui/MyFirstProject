@@ -52,35 +52,27 @@
         <section class="categories">
           <h1>Women</h1>
           <h2>Categories</h2>
-          <form method="GET">
+          <form method="GET" id="filter-form">
             <div class="categories-wrapper">
               <select name="size" id="size" class="dropdown">
                 <option value="size">Size</option>
-                <option value="x-small">X-small</option>
-                <option value="small">Small</option>
-                <option value="medium">Medium</option>
-                <option value="Large">Large</option>
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
               </select>
               <select name="color" id="color" class="dropdown">
-                <option value="color">Color</option>
-                <option value="black">Black</option>
-                <option value="blue">Blue</option>
-                <option value="green">Green</option>
-                <option value="red">Red</option>
-              </select>
-              <select name="qualities" id="qualities" class="dropdown">
-                <option value="qualities">Qualities</option>
-                <option value="water-resistant">Water resistant</option>
-                <option value="waterproof">Waterproof</option>
-                <option value="wind-resistant">Wind resistant</option>
-                <option value="windbreaker">Windbreaker</option>
+                <option value="Color">Color</option>
+                <option value="Black">Black</option>
+                <option value="Blue">Blue</option>
+                <option value="Green">Green</option>
+                <option value="Orange">Orange</option>
               </select>
               <select name="prices" id="prices" class="dropdown">
                 <option value="prices">Prices</option>
                 <option value="$0-$100">$0-$100</option>
                 <option value="$100-$200">$100-$200</option>
-                <option value="$200-$300">$200-$300</option>
-                <option value="over">Over $300</option>
+                <option value="over-$200">Over $200</option>
               </select>
               <input
                 type="submit"
