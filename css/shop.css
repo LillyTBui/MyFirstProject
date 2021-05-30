@@ -66,3 +66,6 @@ select {
   margin: 10px;
 }
 
+.star{
+  color: var(--color-dark-green);
+}

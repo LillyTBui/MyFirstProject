@@ -67,3 +67,19 @@ p,
   padding: 10px;
   letter-spacing: 1px;
 }
+
+.account-error{
+  display: none;
+  text-align: left;
+  padding: 5px 0px;
+  color: red;
+}
+
+.welcome-message{
+    display: none;
+    text-align: center;
+    color: green;
+    border: 2px solid green;
+    max-width: 50%;
+    margin: 10px auto;
+}

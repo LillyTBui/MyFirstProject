@@ -7,6 +7,7 @@ export const productArray = [
     id: "1",
     color: "Blue",
     size: ["S", "L"],
+    popular: 5,
     price: 1499,
   },
   {
@@ -16,6 +17,7 @@ export const productArray = [
     id: "2",
     color: "Orange",
     size: ["XS", "S", "L"],
+    popular: 3,
     price: 1999,
   },
   {
@@ -25,6 +27,7 @@ export const productArray = [
     id: "3",
     color: "Green",
     size: ["M"],
+    popular: 2,
     price: 1999,
   },
   {
@@ -34,6 +37,7 @@ export const productArray = [
     id: "4",
     color: "Blue",
     size: ["XS", "M"],
+    popular: 4,
     price: 2999,
   }
 ];

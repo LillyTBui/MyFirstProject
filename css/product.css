@@ -67,7 +67,6 @@ select {
   flex-direction: column;
 }
 
-/*************/
 .product-details__image{
   background-size: cover;
   background-position:center;
@@ -116,4 +115,10 @@ select {
   height: 150px;
   width: 100px;
   margin-top: 10px;
+}
+
+.productSize__style{
+  display: none;
+  color: red;
+  margin-bottom: 10px;
 }
