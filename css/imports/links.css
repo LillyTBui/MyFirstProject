@@ -27,8 +27,8 @@ a {
 .cta-green {
   cursor:pointer;
   background-color: var(--color-dark-blue);
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding: 5px 15px;
+  border-radius: 15px;
   border: none;
   color: white;
   margin: 10px auto;
@@ -81,6 +81,16 @@ i {
   color: white;
   margin: 20px auto;
   font-weight: bold;
+}
+
+.to-cart{
+  cursor:pointer;
+  background-color: var(--color-yellow);
+  padding: 5px 15px;
+  border-radius: 15px;
+  border: none;
+  color: white;
+  margin: 10px auto;
 }
 
 .fas{

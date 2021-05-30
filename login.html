@@ -13,22 +13,6 @@
       src="https://kit.fontawesome.com/b9235904b4.js"
       crossorigin="anonymous"
     ></script>
-    <!-- Hotjar Tracking Code for https://admiring-haibt-3ff3c7.netlify.app/ -->
-    <script>
-      (function (h, o, t, j, a, r) {
-        h.hj =
-          h.hj ||
-          function () {
-            (h.hj.q = h.hj.q || []).push(arguments);
-          };
-        h._hjSettings = { hjid: 2390664, hjsv: 6 };
-        a = o.getElementsByTagName("head")[0];
-        r = o.createElement("script");
-        r.async = 1;
-        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-        a.appendChild(r);
-      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
-    </script>
   </head>
   <body>
     <header>
@@ -73,13 +57,18 @@
             </p>
           </div>
         </div>
+        <div class="welcome-message">
+          <h2>Welcome! You have successfully logged in!</h2>
+        </div>
         <div class="login__form">
           <form action="index.html">
             <h1>Login</h1>
             <label for="email">Email</label>
             <input type="email" name="email" id="email" />
+            <div class="account-error" id="emailError">Please enter a valid email</div>
             <label for="password">Password</label>
             <input type="password" name="password" id="password" />
+            <div class="account-error" id="passwordError">Wrong password</div>
             <div class="remember">
               <div class="checkbox-remember">
                 <input type="checkbox" id="remember-me" />
@@ -117,5 +106,6 @@
         <i class="fab fa-youtube"></i>
       </div>
     </footer>
+    <script src="js/login.js"></script>
   </body>
 </html>
