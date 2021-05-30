@@ -6,8 +6,9 @@ const numberOfProductContainer = document.querySelector(".product__Number");
 let isEmpty;
 let number;
 
-/*productArray.forEach(createHTML);
-numberOfProducts(4);*/
+createStarRating(productArray);
+productArray.forEach(createHTML);
+numberOfProducts(4);
 
 function createHTML(product){
   number++;
@@ -50,67 +51,7 @@ const price = document.querySelector("#prices");
 const sort = document.querySelector("#popular");
 let calculatedPrice;
 
-form.addEventListener("submit", function(event){
-  event.preventDefault();
-  const sizeChoice = size.options[size.selectedIndex];
-  const colorChoice = color.options[color.selectedIndex];
-  const priceChoice = price.options[price.selectedIndex];
 
-  clearHTML();
-  number = 0;
-  productArray.forEach(function(item){
-    if(sizeChoice.value === "size" && colorChoice.value === "Color" && priceChoice.value === "prices") {
-      createHTML(item);
-    }
-    else if(sizeChoice.value !== "size"){
-      for(let i = 0; i < item.size.length; i++){
-        if(item.size[i] === sizeChoice.value){
-          const productPrice = comparePrice(item.price);
-          if(colorChoice.value === "Color" && priceChoice.value === "prices"){
-            createHTML(item);
-          }
-          else if(colorChoice.value === "Color" && priceChoice.value === productPrice){
-            createHTML(item);
-          }
-          else if(colorChoice.value === item.color && priceChoice.value === "prices"){
-            createHTML(item);
-          }
-          else if(colorChoice.value === item.color && priceChoice.value === productPrice){
-            createHTML(item);
-          }
-          else if(colorChoice.value === "Black" || priceChoice.value === "minPrice"){
-            errorMessage();
-          }
-        }
-      }
-    }
-    else if(colorChoice.value !== "Color"){
-      const productPrice = comparePrice(item.price);
-      if(sizeChoice.value === "size"){
-        if(colorChoice.value === item.color && priceChoice.value === "prices"){
-          createHTML(item);
-        }
-        else if(colorChoice.value === item.color && priceChoice.value === productPrice){
-          createHTML(item);
-        }
-      }
-    }
-    else if(priceChoice.value !== "prices"){
-      const productPrice = comparePrice(item.price);
-      if(priceChoice.value === productPrice){
-        if(sizeChoice.value === "size" && colorChoice.value === "Color"){
-          createHTML(item);
-        }
-      }
-    }
-  })
-  if(isEmpty === true){
-    errorMessage();
-  }
-
-  numberOfProducts(number);
-
-})
 
 function comparePrice(price){
   if(price < 1000){
@@ -151,15 +92,72 @@ sort.addEventListener("change", (event) =>
     bubbleSortLow(productArray, productArray.length, sortValue);
   }
   const currentArray = newArray(productArray, productArray.length);
-  createStarRating(currentArray);
-  console.log(currentArray);
+  clearHTML();
   currentArray.forEach(createHTML);
-  numberOfProducts(4);
+
+  form.addEventListener("submit", function(event){
+    event.preventDefault();
+    const sizeChoice = size.options[size.selectedIndex];
+    const colorChoice = color.options[color.selectedIndex];
+    const priceChoice = price.options[price.selectedIndex];
+  
+    clearHTML();
+    number = 0;
+    currentArray.forEach(function(item){
+      if(sizeChoice.value === "size" && colorChoice.value === "Color" && priceChoice.value === "prices") {
+        createHTML(item);
+      }
+      else if(sizeChoice.value !== "size"){
+        for(let i = 0; i < item.size.length; i++){
+          if(item.size[i] === sizeChoice.value){
+            const productPrice = comparePrice(item.price);
+            if(colorChoice.value === "Color" && priceChoice.value === "prices"){
+              createHTML(item);
+            }
+            else if(colorChoice.value === "Color" && priceChoice.value === productPrice){
+              createHTML(item);
+            }
+            else if(colorChoice.value === item.color && priceChoice.value === "prices"){
+              createHTML(item);
+            }
+            else if(colorChoice.value === item.color && priceChoice.value === productPrice){
+              createHTML(item);
+            }
+            else if(colorChoice.value === "Black" || priceChoice.value === "minPrice"){
+              errorMessage();
+            }
+          }
+        }
+      }
+      else if(colorChoice.value !== "Color"){
+        const productPrice = comparePrice(item.price);
+        if(sizeChoice.value === "size"){
+          if(colorChoice.value === item.color && priceChoice.value === "prices"){
+            createHTML(item);
+          }
+          else if(colorChoice.value === item.color && priceChoice.value === productPrice){
+            createHTML(item);
+          }
+        }
+      }
+      else if(priceChoice.value !== "prices"){
+        const productPrice = comparePrice(item.price);
+        if(priceChoice.value === productPrice){
+          if(sizeChoice.value === "size" && colorChoice.value === "Color"){
+            createHTML(item);
+          }
+        }
+      }
+    })
+    if(isEmpty === true){
+      errorMessage();
+    }
+    numberOfProducts(number);
+  })
 }
 );
 
 function createStarRating(arr){
-  
   for(let i = 0; i < arr.length; i++){
     let rate = "";
     for(let j = 0; j < arr[i].popular; j++){
