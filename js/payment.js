@@ -59,7 +59,6 @@ month.onblur = function(){
     if(month.value > 0 && month.value <= 12){
         monthError.style.display = "none";
         validMonth = true;
-        console.log("what");
     }
     else{
         monthError.style.display = "block";

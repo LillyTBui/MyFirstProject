@@ -1,7 +1,6 @@
 /** @format */
 
 const product = JSON.parse(localStorage.getItem("cartList"));
-console.log(product);
 
 const productWrapper = document.querySelector(".product__wrapper");
 const summary = document.querySelector(".summmary__section");
@@ -42,7 +41,6 @@ if(totProducts === 0){
 }
 
 const removeItem = document.querySelectorAll(".fa-trash-alt");
-console.log(removeItem);
 removeItem.forEach(function(icon) {
     icon.onclick = function(event) {
       const oldList = JSON.parse(localStorage.getItem("cartList"));
@@ -50,7 +48,6 @@ removeItem.forEach(function(icon) {
       const itemToRemove = oldList.findIndex(item => parseInt(item.index) === indexNumber);
       const remove = oldList.find(item => parseInt(item.index) === indexNumber);
       oldList.splice(itemToRemove, 1);
-      console.log(oldList);
       removeProduct(remove);
       localStorage.setItem("cartList", JSON.stringify(oldList));
       window.location.reload();
@@ -79,7 +76,6 @@ summary.innerHTML = `
 
 function removeProduct(product){
   const findproduct = parseInt(product.id);
-  console.log(findproduct);
   let currentProduct;
   if (findproduct === 1) {
     currentProduct = JSON.parse(localStorage.getItem("numb1"));
