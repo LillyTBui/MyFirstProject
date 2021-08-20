@@ -1,99 +1,67 @@
-/** @format */
-
-const product = JSON.parse(localStorage.getItem("cartList"));
+const baseUrl = "https://sunnyday.one/rainydays/wp-json/wc/v3/products";
+const key =
+  "?consumer_key=ck_d7eb5b35d919fb3bd9e8c577544b21f97d082894&consumer_secret=cs_ceb97c2780d7259b4c1f6754a58dc08b808a3f3d";
+const id = JSON.parse(localStorage.getItem("product"));
+const size = JSON.parse(localStorage.getItem("productSize"));
+const baseURL = baseUrl + "/" + id + key;
 
 const productWrapper = document.querySelector(".product__wrapper");
 const summary = document.querySelector(".summmary__section");
 const totalProducts = document.querySelector(".total-products");
-let totalCost = 0;
 let totProducts = 0;
 
-if (product === null) {
-  productWrapper.innerHTML = `<h3 class="empty-bag">There are no products in your shopping bag</h3>`;
-} else {
-  product.forEach(function (product) {
-    productWrapper.innerHTML += `
-        <div class="product-added">
-            <div style="background-image: url(${product.image})" class="shopping-cart__img"></div>
-            <div class="product-added__section"> 
-                    <h3>${product.name}</h3>
-                    <p>${product.description}</p>
-                  </div>
-                  <p>${product.color}</p>
-                  <p>Size: ${product.chosenSize}</p>
-                  <p>Quantity: 1</p>
-                  <p>${product.price},-</p>
-                  <i class="fas fa-trash-alt" data-product="${product.index}"></i>
-        </div>`;
-    totalCost += product.price;
-    totProducts++;
-  });
+async function getProducts(url) {
+  const response = await fetch(url);
+  const products = await response.json();
+  console.log(products);
+  createBag(products);
+  createSummary(products);
 }
 
-if(totProducts === 0){
-  productWrapper.innerHTML = `<h3 class="empty-bag">There are no products in your shopping bag</h3>`;
-  localStorage.removeItem("cartList");
-  localStorage.removeItem("index");
-  localStorage.removeItem("numb1");
-  localStorage.removeItem("numb2");
-  localStorage.removeItem("numb3");
-  localStorage.removeItem("numb4");
-}
-
-const removeItem = document.querySelectorAll(".fa-trash-alt");
-removeItem.forEach(function(icon) {
-    icon.onclick = function(event) {
-      const oldList = JSON.parse(localStorage.getItem("cartList"));
-      const indexNumber = parseInt(event.target.dataset.product);
-      const itemToRemove = oldList.findIndex(item => parseInt(item.index) === indexNumber);
-      const remove = oldList.find(item => parseInt(item.index) === indexNumber);
-      oldList.splice(itemToRemove, 1);
-      removeProduct(remove);
-      localStorage.setItem("cartList", JSON.stringify(oldList));
-      window.location.reload();
-    };
-})
-
-totalProducts.innerHTML = `<p>Total products: ${totProducts}</p>`;
-
-summary.innerHTML = `
-    <div class="summary">
-        <h2>Order summary</h2>
-        <div class="summary-row">
-          <p>Products</p>
-          <p>${totalCost}</p>
-        </div>
-        <div class="summary-row">
-          <p>Shipping costs</p>
-          <p>0 NOK</p>
-        </div>
-        <div class="summary-row">
-          <p><strong>Total Prize</strong></p>
-          <p>${totalCost}</p>
-        </div>
-    </div>
-    <a href="checkout-payment.html" class="cta summary-btn">Go to Payment</a>`;
-
-function removeProduct(product){
-  const findproduct = parseInt(product.id);
-  let currentProduct;
-  if (findproduct === 1) {
-    currentProduct = JSON.parse(localStorage.getItem("numb1"));
-    currentProduct--;
-    localStorage.setItem("numb1", currentProduct);
-  } else if (findproduct === 2) {
-    currentProduct = JSON.parse(localStorage.getItem("numb2"));
-    currentProduct--;
-    localStorage.setItem("numb2", currentProduct);
-  } else if (findproduct === 3) {
-    currentProduct = JSON.parse(localStorage.getItem("numb3"));
-    currentProduct--;
-    localStorage.setItem("numb3", currentProduct);
+function createBag(product) {
+  if (id === null) {
+    productWrapper.innerHTML = `<h3 class="empty-bag">There are no products in your shopping bag</h3>`;
   } else {
-    currentProduct = JSON.parse(localStorage.getItem("numb4"));
-    currentProduct--;
-    localStorage.setItem("numb4", currentProduct);
+    productWrapper.innerHTML += `
+              <div class="product-added">
+                  <div style="background-image: url(${product.images[0].src})" class="shopping-cart__img"></div>
+                  <div class="product-added__section"> 
+                          <h3>${product.name}</h3>
+                          <p>${product.description}</p>
+                        </div>
+                        <p>${product.attributes[0].options[0]}</p>
+                        <p>Size: ${size}</p>
+                        <p>Quantity: 1</p>
+                        <p>${product.price}$</p>
+              </div>`;
   }
-  parseInt(currentProduct);
 }
 
+getProducts(baseURL);
+
+function createSummary(product) {
+  let productPrice;
+  if (id === null) {
+    productPrice = 0;
+  } else {
+    productPrice = product.price;
+  }
+
+  summary.innerHTML = `
+  <div class="summary">
+      <h2>Order summary</h2>
+      <div class="summary-row">
+        <p>Products</p>
+        <p>${productPrice}$</p>
+      </div>
+      <div class="summary-row">
+        <p>Shipping costs</p>
+        <p>0$</p>
+      </div>
+      <div class="summary-row">
+        <p><strong>Total Prize</strong></p>
+        <p>${productPrice}$</p>
+      </div>
+  </div>
+  <a href="checkout-payment.html" class="cta summary-btn">Go to Payment</a>`;
+}
