@@ -16,11 +16,12 @@ const sizeError = document.querySelector(".productSize__style");
 async function getProducts(url) {
   const response = await fetch(url);
   const products = await response.json();
-  console.log(products);
   createDetails(products);
   createDrop(products.attributes[1].options);
   addImage(products);
+
   const buttonToAdd = document.querySelector(".cta-cart");
+  
   buttonToAdd.onclick = function (event) {
     const sizeChoice = sizeButton.options[sizeButton.selectedIndex];
     if (!hasChoosenProduct(sizeChoice.value)) {
@@ -44,14 +45,29 @@ async function getProducts(url) {
 }
 
 function createDetails(product) {
+  let price = product.price + "$";
+  let isDiscount = false;
+
+  if(product.attributes.length === 3){
+    let discount = calculate(product.attributes[2].options[0], product);
+    price = discount + "$";
+    isDiscount = true;
+  }
+
   productDetailsContainer.innerHTML += `<div>
           <h1>${product.name}</h1>
+          <p class="detail-price">${price}</p>
           <h2>${product.description}</h2>
           <p>${product.short_description}</p>
           <h3>Color</h3>
           <div><i style="color:${product.attributes[0].options[0]}" class="fas fa-circle fa-3x "></i></div>
       </div>`;
   button.innerHTML = `<button class="cta-green cta-cart" data-product="${product.id}">Add to cart</button>`;
+
+  const priceColor = document.querySelector(".detail-price");
+  if(isDiscount === true){
+    priceColor.style.color = "red";
+  }
 }
 
 function createDrop(size) {
@@ -76,13 +92,19 @@ function hasChoosenProduct(size) {
 }
 
 function showCart(product, size) {
+  let price = product.price;
+
+  if(product.attributes.length === 3){
+    price = calculate(product.attributes[2].options[0], product);
+  }
+
   cartList.innerHTML = `<div class="cart">
         <div style="background-image: url(${product.images[0].src})" class="cart-image"></div>
         <div class="cart-description">
             <h3>Added to cart</h3>
             <h4 class="cart-description_items">${product.name}</h4>
             <p>Size: ${size}</p>
-            <p>${product.price}$</p>
+            <p>${price}$</p>
             <a href="../shopping-bag.html" class="to-cart">
                   Go to cart
             </a>

@@ -13,7 +13,6 @@ let totProducts = 0;
 async function getProducts(url) {
   const response = await fetch(url);
   const products = await response.json();
-  console.log(products);
   createBag(products);
   createSummary(products);
 }
@@ -22,6 +21,8 @@ function createBag(product) {
   if (id === null) {
     productWrapper.innerHTML = `<h3 class="empty-bag">There are no products in your shopping bag</h3>`;
   } else {
+    let price = getPrice(product);
+
     productWrapper.innerHTML += `
               <div class="product-added">
                   <div style="background-image: url(${product.images[0].src})" class="shopping-cart__img"></div>
@@ -32,7 +33,7 @@ function createBag(product) {
                         <p>${product.attributes[0].options[0]}</p>
                         <p>Size: ${size}</p>
                         <p>Quantity: 1</p>
-                        <p>${product.price}$</p>
+                        <p>${price}$</p>
               </div>`;
   }
 }
@@ -44,7 +45,7 @@ function createSummary(product) {
   if (id === null) {
     productPrice = 0;
   } else {
-    productPrice = product.price;
+    productPrice = getPrice(product);
   }
 
   summary.innerHTML = `
@@ -65,3 +66,14 @@ function createSummary(product) {
   </div>
   <a href="checkout-payment.html" class="cta summary-btn">Go to Payment</a>`;
 }
+
+function getPrice(product){
+  let price = product.price;
+  if(product.attributes.length === 3){
+    let discount = product.attributes[2].options[0];
+    discount = (parseInt(product.price) * parseInt(discount)) / 100;
+    price = parseInt(product.price) - discount;
+  }
+  return price;
+}
+

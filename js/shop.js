@@ -14,23 +14,28 @@ async function getProducts(url) {
   const response = await fetch(url);
   const products = await response.json();
   productContainer.innerHTML = "";
-  products.forEach(createHTML);
+  let message;
+  let numbOfItems = 0;
+
+  for(let i = 0; i < products.length; i++){
+    numbOfItems++;
+    if (products[i].attributes.length === 3) {
+      message = createHTML(products[i], numbOfItems);
+      productContainer.innerHTML += message;
+      createDiscount(products[i], numbOfItems);
+
+    }
+    else{
+      message = createHTML(products[i], numbOfItems);
+      productContainer.innerHTML += message;
+    }
+  }
+
   const selectedProduct = document.querySelector(".popular-products");
   selectedProduct.onclick = function (event) {
     const id = event.target.dataset.id;
     localStorage.setItem("id", JSON.stringify(id));
   };
-}
-
-function createHTML(product) {
-  productContainer.innerHTML += `<a href="products/product.html" data-id=${product.id}>
-        <div class="product" data-product=${product.id}>
-            <div style="background-image:url(${product.images[0].src})" class="product-image" data-id=${product.id}></div>
-            <h3 data-id=${product.id}>${product.name}</h3>
-            <p data-id=${product.id}>${product.description}</p>
-            <p data-id=${product.id}>${product.price}$</p>
-        </div>
-        </a>`;
 }
 
 getProducts(baseURL);
