@@ -1,26 +1,34 @@
 /** @format */
 
-.welcome {
+.welcome{
   background-image: url("../images/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 70vh;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  position: relative;
+  min-height: 50vh;
 }
 
-.welcome__content {
-  background-color: white;
-  min-height: 30vh;
-  padding: 40px 70px;
-  margin: auto 0;
+.welcome__content{
+  margin: 30px 10px 30px 10px;
+  text-align: center;
+  top: 30vh;
+  right: 50px;
 }
 
-.welcome p {
-  padding-top: 10px;
-  padding-bottom: 20px;
+.welcome__content h1{
+  font-size: 1.5em;
+}
+.welcome__content p{
+  margin: 50px 0px 50px 0px;
+}
+
+.welcome-btn{
+  margin-top: 30px;
+}
+
+.welcome-line{
+  border-bottom: 3px solid var(--color-yellow);
+  max-width: 50px;
+  margin: auto;
 }
 
 .service {
@@ -65,6 +73,7 @@
 .review__customer h2 {
   text-align: center;
 }
+
 .review__customer {
   max-width: 400px;
   margin-top: 20px;

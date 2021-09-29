@@ -5,10 +5,25 @@
     margin: 20px 50px;
   }
 
+  .welcome{
+    background-position: initial;
+    min-height: 80vh;
+  }
+
+  .welcome__content{
+    margin: 50px;
+  }
+
+  .welcome__content h1{
+    font-size: 2em;
+  }
+
   .service {
+    background-color: rgba(226, 222, 222, 0.281);
     display: flex;
     margin: 20px auto;
-    max-width: 90vw;
+    padding: 20px;
+    max-width: 100%;
   }
 
   .service > * {
@@ -230,23 +245,6 @@
 
   #hamburger-menu {
     display: none;
-  }
-
-  .welcome__img {
-    background-image: url("../images/welcome-img.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute;
-    width: 36%;
-    height: 90%;
-    top: 5%;
-    right: 90px;
-    bottom: 25vw;
-  }
-
-  .welcome p {
-    max-width: 400px;
   }
 
   .explore {

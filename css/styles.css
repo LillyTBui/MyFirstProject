@@ -89,8 +89,9 @@ nav li {
   font-size: 0.9em;
 }
 
-.product{
+.product, .product1, .product2, .product3, .product4{
   text-align: center;
+  position: relative;
 }
 
 .product-image{
@@ -107,7 +108,7 @@ nav li {
   border-width: 0px 0px 1px 0px;
   border-style: solid;
   padding-bottom: 10px;
-  margin: 0px auto 0px auto;
+  margin: 0px auto 20px auto;
   max-width: 235px;
 }
 
@@ -143,3 +144,34 @@ footer a {
   color: white;
 }
 
+/* links */
+.discount-tag{
+  position: absolute;
+  top: 0px;
+  right: 25px;
+  max-height: 100px;
+}
+
+.discount-price{
+  position: absolute;
+  z-index: 1000;
+  top: 0px;
+  right: 35px;
+  color: white;
+  font-size: 20px;
+}
+
+.price-message{
+  display: flex;
+  justify-content: center;
+}
+
+.oldPrice{
+  text-decoration-line: line-through;
+  margin:0px 10px 0px 0px;
+}
+
+.newPrice{
+  color: red;
+  margin: 0px;
+}
