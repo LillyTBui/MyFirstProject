@@ -66,10 +66,6 @@ nav li {
   max-width: 120px;
 }
 
-.search-wrapper {
-  display: none;
-}
-
 /* Popular products */
 .popular-section h2{
   text-align: center;

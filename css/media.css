@@ -201,14 +201,17 @@
   }
 
   .icon-wrapper {
-    margin: 0px 0px 0px 100px;
+    margin: 0px 0px 0px 20px;
+  }
+
+  .icon-wrapper a{
+    padding: 5px;
   }
 
   nav {
     display: flex;
     position: static;
     align-items: center;
-    min-width: 700px;
   }
 
   nav li {
@@ -217,26 +220,6 @@
 
   #hamburger-menu:checked ~ nav {
     display: inline-flex;
-  }
-
-  .search-wrapper {
-    position: relative;
-    max-width: 60px;
-    display: inline-block;
-    margin: 50px;
-  }
-
-  .search-box {
-    border-radius: 10px;
-    border: 2px solid #d3d2d2;
-    margin: 0px;
-    padding: 0px;
-  }
-
-  .search-icon {
-    position: absolute;
-    left: 130px;
-    top: 5px;
   }
 
   #hamburger-icon {
