@@ -9,101 +9,90 @@
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/contact.css" rel="stylesheet" />
     <link href="css/media.css" rel="stylesheet" />
-    <script
-      src="https://kit.fontawesome.com/b9235904b4.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/b9235904b4.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <header>
-      <a href="index.html"
-        ><img
-          src="images/RainyDays_Logo.png"
-          class="logo"
-          alt="RainyDays's logo"
-      /></a>
-      <label for="hamburger-menu"
-        ><i class="fas fa-bars" id="hamburger-icon"></i
-      ></label>
-      <input type="checkbox" id="hamburger-menu" />
-      <nav>
-        <ul>
-          <li><a href="shop-men.html">Men</a></li>
-          <li><a href="shop-women.html">Women</a></li>
-          <li><a href="about-us.html">About Us</a></li>
-          <li><a href="contact-us.html" class="active">Contact Us</a></li>
-        </ul>
-        <div class="icon-wrapper">
-          <a href="login.html"><i class="far fa-user icon"></i></a>
-          <a href="shopping-bag.html"
-            ><i class="fas fa-shopping-cart icon"></i
-          ></a>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <div class="contact__main">
-        <section class="contact__info">
-          <div>
-            <h1>Get in touch</h1>
-            <p>Customer service is available at all time in our website.</p>
-            <p>
-              Fill in the required form to send in your query. Please fill in as
-              much information as possible.
-            </p>
-            <div class="contact__social">
-              <h2>We are also on social media</h2>
-              <a href=""><i class="fab fa-facebook-f fa-2x"></i></a>
-              <a href=""><i class="fab fa-instagram fa-2x"></i></a>
-              <a href=""><i class="fab fa-youtube fa-2x"></i></a>
-            </div>
+    <div class="wrapper">
+      <header>
+        <a href="index.html"><img src="images/RainyDays_Logo.png" class="logo" alt="RainyDays's logo" /></a>
+        <label for="hamburger-menu"><i class="fas fa-bars" id="hamburger-icon"></i></label>
+        <input type="checkbox" id="hamburger-menu" />
+        <nav>
+          <ul>
+            <li><a href="shop-men.html">Men</a></li>
+            <li><a href="shop-women.html">Women</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact-us.html" class="active">Contact Us</a></li>
+          </ul>
+          <div class="icon-wrapper">
+            <a href="login.html"><i class="far fa-user icon"></i></a>
+            <a href="shopping-bag.html"><i class="fas fa-shopping-cart icon"></i></a>
           </div>
-        </section>
-        <section class="contact__form">
-          <form id="contactForm">
+        </nav>
+      </header>
+      <main>
+        <div class="contact__main">
+          <section class="contact__info">
             <div>
-              <label>Your full name (required)
-                <input type="text" name="name" id="name" />
-              </label>
-              <div class="form-error" id="nameError">Please enter your full name</div>
+              <h1>Get in touch</h1>
+              <p>Customer service is available at all time in our website.</p>
+              <p>Fill in the required form to send in your query. Please fill in as much information as possible.</p>
+              <div class="contact__social">
+                <h2>We are also on social media</h2>
+                <a href=""><i class="fab fa-facebook-f fa-2x"></i></a>
+                <a href=""><i class="fab fa-instagram fa-2x"></i></a>
+                <a href=""><i class="fab fa-youtube fa-2x"></i></a>
+              </div>
             </div>
-            <div>
-              <label>
+          </section>
+          <section class="contact__form">
+            <form id="contactForm">
+              <div>
+                <label
+                  >Your full name (required)
+                  <input type="text" name="name" id="name" />
+                </label>
+                <div class="form-error" id="nameError">Please enter your full name</div>
+              </div>
+              <div>
+                <label>
                   Your email (required)
                   <input type="email" name="email" id="email" />
-              </label>
-              <div class="form-error" id="emailError">Please enter a valid email</div>
-            </div>
-            <div>
-              <label>Subject (required)
-                <select name="subject" id="subject">
-                  <option value=""></option>
-                  <option value="account">Account</option>
-                  <option value="purchase">Purchase</option>
-                  <option value="feedback">Feedback</option>
-                  <option value="other">Other</option>
-                </select>
-              </label>
-              <div class="form-error" id="subjectError">Please enter a valid subject</div>
-            </div>
-            <div>
-              <label>
-                Message (minimum 25 characters)
-                <textarea name="message" id="message" cols="30" rows="10"></textarea>
-              </label>
-              <div class="form-error" id="messageError">Please enter at least 25 characters</div>
-            </div>
-            <div class="checkbox-wrapper">
-              <input type="checkbox" id="email-updates" />
-              <label for="email-updates">Sign up for email updates</label>
-            </div>
-            <div class="button-wrapper">
-              <button class="send-button">Send</button>
-            </div>
-          </form>
-        </section>
-      </div>
-    </main>
+                </label>
+                <div class="form-error" id="emailError">Please enter a valid email</div>
+              </div>
+              <div>
+                <label
+                  >Subject (required)
+                  <select name="subject" id="subject">
+                    <option value=""></option>
+                    <option value="account">Account</option>
+                    <option value="purchase">Purchase</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="other">Other</option>
+                  </select>
+                </label>
+                <div class="form-error" id="subjectError">Please enter a valid subject</div>
+              </div>
+              <div>
+                <label>
+                  Message (minimum 25 characters)
+                  <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </label>
+                <div class="form-error" id="messageError">Please enter at least 25 characters</div>
+              </div>
+              <div class="checkbox-wrapper">
+                <input type="checkbox" id="email-updates" />
+                <label for="email-updates">Sign up for email updates</label>
+              </div>
+              <div class="button-wrapper">
+                <button class="send-button">Send</button>
+              </div>
+            </form>
+          </section>
+        </div>
+      </main>
+    </div>
     <footer>
       <div class="footer__content">
         <a href="contact-us.html">Help</a>

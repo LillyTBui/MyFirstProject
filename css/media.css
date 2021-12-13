@@ -5,23 +5,23 @@
     margin: 20px 50px;
   }
 
-  .welcome{
+  .welcome {
     background-position: initial;
     min-height: 80vh;
   }
 
-  .welcome__content{
+  .welcome__content {
     margin: 50px;
   }
 
-  .welcome__content h1{
+  .welcome__content h1 {
     font-size: 2em;
   }
 
   .service {
     background-color: rgba(226, 222, 222, 0.281);
     display: flex;
-    margin: 20px auto;
+    justify-content: center;
     padding: 20px;
     max-width: 100%;
   }
@@ -56,7 +56,7 @@
     margin: 50px 20px;
   }
 
-  .shop-section{
+  .shop-section {
     margin: 0 auto;
   }
 
@@ -65,7 +65,7 @@
   }
 
   /* Product */
-  .main-wrapper{
+  .main-wrapper {
     flex-direction: row;
     margin-top: 50px;
   }
@@ -85,7 +85,7 @@
     grid-template-areas:
       "categories filter"
       "categories products";
-    margin: 20px 60px 50px 20px;
+    margin: 2rem 0rem 1rem 0rem;
     gap: 30px;
   }
 
@@ -93,7 +93,7 @@
     margin: 20px 50px;
   }
 
-  .product-filter{
+  .product-filter {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -104,7 +104,7 @@
     margin: 0px;
   }
 
-  .product-filter form{
+  .product-filter form {
     display: block;
   }
 
@@ -151,7 +151,6 @@
 }
 
 @media (min-width: 800px) {
-
   .product-added {
     display: flex;
     justify-content: space-evenly;
@@ -165,25 +164,24 @@
   }
 
   /* Product*/
-  .main-wrapper{
+  .main-wrapper {
     max-width: 1000px;
   }
 
-  .product-details__image{
+  .product-details__image {
     height: 400px;
     width: 300px;
   }
 }
 
 @media (min-width: 1000px) {
-
   /* Checkout success */
   .success__main {
     max-width: 40vw;
   }
 
   /* Product */
-  .seasonal-autumn{
+  .seasonal-autumn {
     max-width: 400px;
   }
 }
@@ -193,7 +191,7 @@
   .shopping-bag__main {
     margin: 100px;
   }
-  
+
   header {
     display: flex;
     justify-content: space-between;
@@ -204,7 +202,7 @@
     margin: 0px 0px 0px 20px;
   }
 
-  .icon-wrapper a{
+  .icon-wrapper a {
     padding: 5px;
   }
 
@@ -265,10 +263,6 @@
 }
 
 @media (min-width: 1300px) {
-  .welcome__content {
-    padding-left: 200px;
-  }
-
   .welcome__img {
     width: 460px;
     height: 500px;
@@ -279,7 +273,7 @@
     margin: 50px auto;
   }
 
-  .shop-section{
+  .shop-section {
     margin: 0 auto;
   }
 
@@ -325,14 +319,9 @@
     max-width: 40vw;
     margin-right: 5vw;
   }
-  .summmary__section {
-    margin-top: 0px;
-    max-width: 20vw;
-  }
 
   /* Checkout success */
   .success__main {
     max-width: 30vw;
   }
 }
-

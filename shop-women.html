@@ -12,48 +12,50 @@
     <script src="https://kit.fontawesome.com/b9235904b4.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <header>
-      <a href="index.html"><img src="images/RainyDays_Logo.png" class="logo" alt="RainyDays's logo" /></a>
-      <label for="hamburger-menu"><i class="fas fa-bars" id="hamburger-icon"></i></label>
-      <input type="checkbox" id="hamburger-menu" />
-      <nav>
-        <ul>
-          <li><a href="shop-men.html">Men</a></li>
-          <li><a href="shop-women.html" class="active">Women</a></li>
-          <li><a href="about-us.html">About Us</a></li>
-          <li><a href="contact-us.html">Contact Us</a></li>
-        </ul>
-        <div class="icon-wrapper">
-          <a href="login.html"><i class="far fa-user icon"></i></a>
-          <a href="shopping-bag.html"><i class="fas fa-shopping-cart icon"></i></a>
+    <div class="wrapper">
+      <header>
+        <a href="index.html"><img src="images/RainyDays_Logo.png" class="logo" alt="RainyDays's logo" /></a>
+        <label for="hamburger-menu"><i class="fas fa-bars" id="hamburger-icon"></i></label>
+        <input type="checkbox" id="hamburger-menu" />
+        <nav>
+          <ul>
+            <li><a href="shop-men.html">Men</a></li>
+            <li><a href="shop-women.html" class="active">Women</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+          </ul>
+          <div class="icon-wrapper">
+            <a href="login.html"><i class="far fa-user icon"></i></a>
+            <a href="shopping-bag.html"><i class="fas fa-shopping-cart icon"></i></a>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <div class="shop-women__welcome"></div>
+        <div class="product__content">
+          <section class="categories">
+            <h1>Women</h1>
+            <h2>Categories</h2>
+            <form method="GET" id="filter-form">
+              <div class="categories-wrapper">
+                <select name="size" id="size" class="dropdown">
+                  <option value="size">Size</option>
+                  <option value="XS">XS</option>
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                  <option value="XL">XL</option>
+                </select>
+                <input type="submit" name="save-changes" value="Save changes" class="cta-green" />
+              </div>
+            </form>
+          </section>
+          <section class="popular-section">
+            <div class="popular-products shop-section"></div>
+          </section>
         </div>
-      </nav>
-    </header>
-    <main>
-      <div class="shop-women__welcome"></div>
-      <div class="product__content">
-        <section class="categories">
-          <h1>Women</h1>
-          <h2>Categories</h2>
-          <form method="GET" id="filter-form">
-            <div class="categories-wrapper">
-              <select name="size" id="size" class="dropdown">
-                <option value="size">Size</option>
-                <option value="XS">XS</option>
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-              </select>
-              <input type="submit" name="save-changes" value="Save changes" class="cta-green" />
-            </div>
-          </form>
-        </section>
-        <section class="popular-section">
-          <div class="popular-products shop-section"></div>
-        </section>
-      </div>
-    </main>
+      </main>
+    </div>
     <footer>
       <div class="footer__content">
         <a href="contact-us.html">Help</a>

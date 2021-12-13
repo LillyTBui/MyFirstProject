@@ -9,91 +9,59 @@
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/payment.css" rel="stylesheet" />
     <link href="css/media.css" rel="stylesheet" />
-    <script
-      src="https://kit.fontawesome.com/b9235904b4.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/b9235904b4.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <header>
-      <a href="index.html"
-        ><img
-          src="images/RainyDays_Logo.png"
-          class="logo"
-          alt="RainyDays's logo"
-      /></a>
-      <a href="contact-us.html" class="payment-help">Help with payment</a>
-    </header>
-    <main>
-      <div class="payment-status">
-        <div>
-          <i class="fas fa-check-circle fa-3x payment-icon"></i>
-          <h2>Shipping info</h2>
-        </div>
-        <div>
-          <i class="far fa-circle fa-3x payment-icon"></i>
-          <h2>Payment Method</h2>
-        </div>
-        <div>
-          <i class="far fa-circle fa-3x payment-icon_next"></i>
-          <h2>Review</h2>
-        </div>
-      </div>
-      <div class="payment-title">
-        <h1>Payment Method</h1>
-      </div>
-      <div class="payment-info">
-        <form id="paymentForm">
-          <h2>Add a payment method</h2>
-          <input type="text" name="fullname" placeholder="Name of card" id="cardName"/>
-          <div class="payment__form-error" id="paymentNameError">Please enter your full name</div>
-          <input
-            type="number"
-            id="cardNumber"
-            name="card-number"
-            placeholder="Card number"
-            
-          />
-          <div class="payment__form-error" id="paymentCardError">Please enter a valid card number</div>
-          <div class="mm-yy">
-            <input
-              type="number"
-              id="month"
-              name="month"
-              placeholder="MM"
-            />
-            <input
-              type="number"
-              id="year"
-              name="year"
-              placeholder="YY"
-            />
+    <div class="wrapper">
+      <header>
+        <a href="index.html"><img src="images/RainyDays_Logo.png" class="logo" alt="RainyDays's logo" /></a>
+        <a href="contact-us.html" class="payment-help">Help with payment</a>
+      </header>
+      <main>
+        <div class="payment-status">
+          <div>
+            <i class="fas fa-check-circle fa-3x payment-icon"></i>
+            <h2>Shipping info</h2>
           </div>
-          <div class="payment__form-error" id="paymentMonthError">Please enter a valid month</div>
-          <div class="payment__form-error" id="paymentYearError">Please enter a valid year</div>
-          <input
-            type="number"
-            id="securityCode"
-            name="security-code"
-            placeholder="Security code"
-          />
-          <div class="payment__form-error" id="paymentSecurityError">Please enter a valid security code</div>
-          <div class="payment-checkbox">
-            <input type="checkbox" name="checkbox-card" />
-            <label for="checkbox-card">Remember this card</label>
+          <div>
+            <i class="far fa-circle fa-3x payment-icon"></i>
+            <h2>Payment Method</h2>
           </div>
-          <div class="payment-cta">
-            <a href="shopping-bag.html" class="cta-dark-green payment-btn back"
-              >Back</a
-            >
-            <button class="cta-dark-green payment-btn">Save & Continue</button>
-            <!--<a href="checkout-success.html" class="cta-dark-green payment-btn"
-              >Save & Continue</a
-            >--->
+          <div>
+            <i class="far fa-circle fa-3x payment-icon_next"></i>
+            <h2>Review</h2>
           </div>
-        </form>
-      </div>
-    </main>
+        </div>
+        <div class="payment-title">
+          <h1>Payment Method</h1>
+        </div>
+        <div class="payment-info">
+          <form id="paymentForm">
+            <h2>Add a payment method</h2>
+            <input type="text" name="fullname" placeholder="Name of card" id="cardName" />
+            <div class="payment__form-error" id="paymentNameError">Please enter your full name</div>
+            <input type="number" id="cardNumber" name="card-number" placeholder="Card number" />
+            <div class="payment__form-error" id="paymentCardError">Please enter a valid card number</div>
+            <div class="mm-yy">
+              <input type="number" id="month" name="month" placeholder="MM" />
+              <input type="number" id="year" name="year" placeholder="YY" />
+            </div>
+            <div class="payment__form-error" id="paymentMonthError">Please enter a valid month</div>
+            <div class="payment__form-error" id="paymentYearError">Please enter a valid year</div>
+            <input type="number" id="securityCode" name="security-code" placeholder="Security code" />
+            <div class="payment__form-error" id="paymentSecurityError">Please enter a valid security code</div>
+            <div class="payment-checkbox">
+              <input type="checkbox" name="checkbox-card" />
+              <label for="checkbox-card">Remember this card</label>
+            </div>
+            <div class="payment-cta">
+              <a href="shopping-bag.html" class="cta-dark-green payment-btn back">Back</a>
+              <button class="cta-dark-green payment-btn">Save & Continue</button>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
     <footer>
       <div class="footer__content">
         <a href="contact-us.html">Help</a>

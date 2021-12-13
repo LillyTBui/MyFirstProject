@@ -9,85 +9,65 @@
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/login.css" rel="stylesheet" />
     <link href="css/media.css" rel="stylesheet" />
-    <script
-      src="https://kit.fontawesome.com/b9235904b4.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/b9235904b4.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <header>
-      <a href="index.html"
-        ><img
-          src="images/RainyDays_Logo.png"
-          class="logo"
-          alt="RainyDays's logo"
-      /></a>
-      <label for="hamburger-menu"
-        ><i class="fas fa-bars" id="hamburger-icon"></i
-      ></label>
-      <input type="checkbox" id="hamburger-menu" />
-      <nav>
-        <ul>
-          <li><a href="shop-men.html">Men</a></li>
-          <li><a href="shop-women.html">Women</a></li>
-          <li><a href="about-us.html">About Us</a></li>
-          <li><a href="contact-us.html">Contact Us</a></li>
-        </ul>
-        <div class="icon-wrapper">
-          <a href="login.html"><i class="far fa-user icon"></i></a>
-          <a href="shopping-bag.html"
-            ><i class="fas fa-shopping-cart icon"></i
-          ></a>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <div class="login__main">
-        <div class="login__info">
-          <div class="login__text">
-            <h1>Welcome back!</h1>
-            <p>
-              Log in to manage your user account, browse our products and see
-              the latest news.
-            </p>
+    <div class="wrapper">
+      <header>
+        <a href="index.html"><img src="images/RainyDays_Logo.png" class="logo" alt="RainyDays's logo" /></a>
+        <label for="hamburger-menu"><i class="fas fa-bars" id="hamburger-icon"></i></label>
+        <input type="checkbox" id="hamburger-menu" />
+        <nav>
+          <ul>
+            <li><a href="shop-men.html">Men</a></li>
+            <li><a href="shop-women.html">Women</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+          </ul>
+          <div class="icon-wrapper">
+            <a href="login.html"><i class="far fa-user icon"></i></a>
+            <a href="shopping-bag.html"><i class="fas fa-shopping-cart icon"></i></a>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <div class="login__main">
+          <div class="login__info">
+            <div class="login__text">
+              <h1>Welcome back!</h1>
+              <p>Log in to manage your user account, browse our products and see the latest news.</p>
+            </div>
+          </div>
+          <div class="welcome-message">
+            <h2>Welcome! You have successfully logged in!</h2>
+          </div>
+          <div class="login__form">
+            <form action="index.html">
+              <h1>Login</h1>
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" />
+              <div class="account-error" id="emailError">Please enter a valid email</div>
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password" />
+              <div class="account-error" id="passwordError">Wrong password</div>
+              <div class="remember">
+                <div class="checkbox-remember">
+                  <input type="checkbox" id="remember-me" />
+                  <label for="remember-me">Remember me</label>
+                </div>
+                <a href="contact-us.html" class="forgot-password">Forgot your password?</a>
+              </div>
+              <input type="submit" value="Log in" class="cta-green" id="login-button" />
+              <p>Or</p>
+              <a href="" class="facebook-btn">Log in with Facebook</a>
+              <p>
+                New member? <a href=""><strong>Join us here</strong></a>
+              </p>
+            </form>
           </div>
         </div>
-        <div class="welcome-message">
-          <h2>Welcome! You have successfully logged in!</h2>
-        </div>
-        <div class="login__form">
-          <form action="index.html">
-            <h1>Login</h1>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" />
-            <div class="account-error" id="emailError">Please enter a valid email</div>
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" />
-            <div class="account-error" id="passwordError">Wrong password</div>
-            <div class="remember">
-              <div class="checkbox-remember">
-                <input type="checkbox" id="remember-me" />
-                <label for="remember-me">Remember me</label>
-              </div>
-              <a href="contact-us.html" class="forgot-password"
-                >Forgot your password?</a
-              >
-            </div>
-            <input
-              type="submit"
-              value="Log in"
-              class="cta-green"
-              id="login-button"
-            />
-            <p>Or</p>
-            <a href="" class="facebook-btn">Log in with Facebook</a>
-            <p>
-              New member? <a href=""><strong>Join us here</strong></a>
-            </p>
-          </form>
-        </div>
-      </div>
-    </main>
+      </main>
+    </div>
     <footer>
       <div class="footer__content">
         <a href="contact-us.html">Help</a>
